@@ -15,12 +15,16 @@
 }
 
 .feature__pic-area {
-  //width: 8em;
+  width: 100px;
+  height: 50px;
 }
 
 .feature__pic {
   width: 100%;
-  //height: 100%;
+  height: 100%;
+  fill: none;
+  stroke: $features;
+  stroke-width: 0.5px;
 }
 
 .feature__desc {
