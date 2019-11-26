@@ -109,3 +109,11 @@
   font-weight: bold;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Museo Sans 500';
+  src: url('/fonts/MuseoSans-500.woff2') format('woff2'),
+      url('/fonts/MuseoSans-500.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -24,7 +24,8 @@
   height: 100%;
   fill: none;
   stroke: $features;
-  stroke-width: 0.5px;
+  stroke-width: 0.7px;
+  stroke-miterlimit: 10px;
 }
 
 .feature__desc {

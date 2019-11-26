@@ -70,7 +70,8 @@ $main-back: #61c4d9;
   stroke: #2a2a29;
   stroke-width: 1px;
   fill: none;
-  stroke-width: 0.5px;
+  stroke-width: 0.7px;
+  stroke-miterlimit: 10px;
 }
 
 .reasons__box-desc {

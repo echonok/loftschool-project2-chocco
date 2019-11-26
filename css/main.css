@@ -184,6 +184,12 @@ table {
   font-weight: bold;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Museo Sans 500';
+  src: url("/fonts/MuseoSans-500.woff2") format("woff2"), url("/fonts/MuseoSans-500.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 .contacts__phone {
   color: #ffffff;
   text-decoration: none;
@@ -220,8 +226,17 @@ table {
   align-items: center;
   padding: 24px 80px 0; }
 
-.logo__pic {
-  width: 53px; }
+.logo__text {
+  font-family: 'Museo Sans 500';
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-stretch: normal;
+  line-height: 0.88;
+  letter-spacing: normal;
+  text-align: left;
+  font-weight: normal;
+  font-style: normal; }
 
 .nav {
   margin: 0 45px;
@@ -410,7 +425,8 @@ table {
   height: 100%;
   fill: none;
   stroke: #b0f7ff;
-  stroke-width: 0.5px; }
+  stroke-width: 0.7px;
+  stroke-miterlimit: 10px; }
 
 .feature__desc {
   padding-left: 10px;
@@ -493,7 +509,8 @@ table {
   stroke: #2a2a29;
   stroke-width: 1px;
   fill: none;
-  stroke-width: 0.5px; }
+  stroke-width: 0.7px;
+  stroke-miterlimit: 10px; }
 
 .reasons__box-desc {
   display: -webkit-box;
