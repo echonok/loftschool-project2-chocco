@@ -6,12 +6,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 1rem 0 -1rem;
+  margin: 0 10px 0 -10px;
 }
 
 .team__item {
   flex: 1 1;
-  margin-right: 2rem;
+  margin-right: 20px;
   &:last-child {
     margin-right: 0;
   }

@@ -30,29 +30,29 @@
   flex: 1 1;
   display: flex;
   flex-direction: column;
-  padding: 5rem 0;
+  //padding: 5rem 0;
   //max-width: 40%;
 }
 
 .promo__title {
-  font-size: 10.5rem;
+  font-size: 60px;
   font-weight: bold;
   line-height: 1;
   text-align: left;
-  color: $main-color;
-  margin-top: 10rem;
+  color: $text-main-color;
+  margin-top: 100px;
 }
 
 .promo__subtitle {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 3.675rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 21px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: $main-color;
+  color: $text-main-color;
   line-height: 1;
 }
 
@@ -76,20 +76,20 @@
 }
 
 .btn {
-  margin: 4.5rem 0 1rem;
-  padding: 3rem 6rem;
-  border-radius: 5rem;
-  background-color: $main-color;
+  margin: 40px 0 10px;
+  padding: 24px 35px;
+  border-radius: 50px;
+  background-color: $text-main-color;
   border: none;
   color: $box-shadow;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 3.325rem;
+  font-size: 19px;
   font-weight: 800;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  box-shadow: 0 0 4rem rgba(0, 0, 1, 0.22);
+  box-shadow: 0 0 40px rgba(0, 0, 1, 0.22);
 }
 

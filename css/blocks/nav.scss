@@ -1,5 +1,5 @@
 .nav {
-	margin: 0 7rem;
+	margin: 0 45px;
 	flex: 1 1;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .nav__item {
-	padding-right: 3.5rem;
+	padding-right: 10px;
 	&:last-child {
 		padding-right: 0;
 	}
@@ -19,7 +19,7 @@
 .nav__link {
 	text-decoration: none;
 	color: $text-main-color;
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

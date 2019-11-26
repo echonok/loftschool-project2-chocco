@@ -15,14 +15,14 @@
   position: relative;
 
   &--active {
-    border-color: $main-color;
+    border-color: $text-main-color;
   }
 
   &:before {
     content: '';
     width: 6px;
     height: 6px;
-    background-color: $main-color;
+    background-color: $text-main-color;
     border-radius: 50%;
     position: absolute;
     top: 50%;

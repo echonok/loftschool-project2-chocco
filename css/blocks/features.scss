@@ -5,10 +5,10 @@
 }
 
 .feature__item {
-  color: $main-color;
+  color: $text-main-color;
   display: flex;
   flex: 1 1;
-  margin-right: 5rem;
+  margin-right: 30px;
   &:last-child {
     margin-right: 0;
   }
@@ -24,8 +24,8 @@
 }
 
 .feature__desc {
-  padding-left: 1rem;  
-  font-size: 2.8rem;
+  padding-left: 10px;  
+  font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;

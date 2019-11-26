@@ -9,7 +9,6 @@ html, body {
 
 body {
   font-family: AlegreyaSans, sans-serif;
-  font-size: 1.6rem;
   margin: 0; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,7 +72,7 @@ table {
 
 .section-title {
   text-transform: uppercase;
-  font-size: 8.4rem;
+  font-size: 48px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -81,7 +80,7 @@ table {
   letter-spacing: normal;
   text-align: center;
   color: #0d0d0d;
-  margin: 5rem 0 2rem; }
+  margin: 50px 0 20px; }
 
 .container {
   margin: 0 auto;
@@ -92,9 +91,8 @@ table {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  /* width: 110rem; */
-  width: 94%;
-  padding: 2.4rem 8rem; }
+  width: 1100px;
+  padding: 24px 80px; }
 
 .mirror {
   -moz-transform: scale(-1, 1);
@@ -190,7 +188,7 @@ table {
 .contacts__phone {
   color: #ffffff;
   text-decoration: none;
-  font-size: 4.2rem;
+  font-size: 24px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -198,7 +196,7 @@ table {
   letter-spacing: normal; }
 
 .contacts__pic {
-  width: 2.1rem; }
+  width: 12px; }
 
 .header {
   position: absolute;
@@ -221,13 +219,13 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 4rem 8rem 0; }
+  padding: 24px 80px 0; }
 
 .logo__pic {
-  width: 9.28rem; }
+  width: 53px; }
 
 .nav {
-  margin: 0 7rem;
+  margin: 0 45px;
   -webkit-box-flex: 1;
   -ms-flex: 1 1;
   flex: 1 1; }
@@ -244,14 +242,14 @@ table {
   align-items: center; }
 
 .nav__item {
-  padding-right: 3.5rem; }
+  padding-right: 10px; }
   .nav__item:last-child {
     padding-right: 0; }
 
 .nav__link {
   text-decoration: none;
   color: #ffffff;
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -297,21 +295,20 @@ table {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 5rem 0; }
+  flex-direction: column; }
 
 .promo__title {
-  font-size: 10.5rem;
+  font-size: 60px;
   font-weight: bold;
   line-height: 1;
   text-align: left;
   color: #ffffff;
-  margin-top: 10rem; }
+  margin-top: 100px; }
 
 .promo__subtitle {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 3.675rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 21px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -335,22 +332,22 @@ table {
   padding: 4.3rem 0; }
 
 .btn {
-  margin: 4.5rem 0 1rem;
-  padding: 3rem 6rem;
-  border-radius: 5rem;
+  margin: 40px 0 10px;
+  padding: 24px 35px;
+  border-radius: 50px;
   background-color: #ffffff;
   border: none;
   color: #0f5a47;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 3.325rem;
+  font-size: 19px;
   font-weight: 800;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  -webkit-box-shadow: 0 0 4rem rgba(0, 0, 1, 0.22);
-  box-shadow: 0 0 4rem rgba(0, 0, 1, 0.22); }
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 1, 0.22);
+  box-shadow: 0 0 40px rgba(0, 0, 1, 0.22); }
 
 .fixed-menu {
   position: fixed;
@@ -401,7 +398,7 @@ table {
   -webkit-box-flex: 1;
   -ms-flex: 1 1;
   flex: 1 1;
-  margin-right: 5rem; }
+  margin-right: 30px; }
   .feature__item:last-child {
     margin-right: 0; }
 
@@ -409,8 +406,8 @@ table {
   width: 100%; }
 
 .feature__desc {
-  padding-left: 1rem;
-  font-size: 2.8rem;
+  padding-left: 10px;
+  font-size: 16px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -436,18 +433,18 @@ table {
   z-index: 2; }
 
 .reasons__subtitle {
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: normal;
   font-style: normal;
   text-align: center;
   color: #666666;
   width: 45%;
   margin: 0 auto;
-  margin-top: 0.375rem;
-  margin-bottom: 3.4375rem; }
+  margin-top: 5px;
+  margin-bottom: 35px; }
 
 .reasons__list {
-  padding: 3rem 0;
+  padding: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -468,7 +465,7 @@ table {
   -ms-flex-align: center;
   align-items: center;
   width: calc(100% / 3);
-  margin-right: 2rem; }
+  margin-right: 20px; }
   .reasons__item:last-child {
     margin-right: 0; }
 
@@ -476,18 +473,18 @@ table {
   position: relative;
   background-color: #f2f5f4;
   border-radius: 50%;
-  border: 4rem solid #f2f5f4;
+  border: 40px solid #f2f5f4;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  width: 5rem;
-  height: 5rem;
-  margin-bottom: 2.1875rem; }
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px; }
 
 .reasons__icon {
   position: absolute;
-  left: -1rem;
-  top: -1rem;
-  height: 7rem;
+  left: -10px;
+  top: -10px;
+  height: 70px;
   stroke: #2a2a29;
   stroke-width: 1px;
   fill: transparent; }
@@ -505,7 +502,7 @@ table {
   align-items: center; }
 
 .reasons__short-desc {
-  font-size: 4.725rem;
+  font-size: 27px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -513,10 +510,10 @@ table {
   letter-spacing: normal;
   text-align: center;
   color: #000000;
-  margin-bottom: 0.9375rem; }
+  margin-bottom: 10px; }
 
 .reasons__desc {
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -528,8 +525,8 @@ table {
 .reasons__item:nth-child(2)::before {
   position: absolute;
   content: '';
-  width: 6.7rem;
-  height: 2.1rem;
+  width: 70px;
+  height: 20px;
   top: 18%;
   left: -10%;
   background: url(/img/icons/dots-reasons.svg);
@@ -538,8 +535,8 @@ table {
 .reasons__item:nth-child(2)::after {
   position: absolute;
   content: '';
-  width: 6.7rem;
-  height: 2.1rem;
+  width: 70px;
+  height: 20px;
   top: 18%;
   right: -10%;
   background: url(/img/icons/dots-reasons.svg);
@@ -562,8 +559,8 @@ table {
 .reviews:after {
   position: absolute;
   content: '';
-  width: 20rem;
-  height: 20rem;
+  width: 200px;
+  height: 200px;
   top: 96%;
   left: 35px;
   background: url("/img/reviews/berries-reviews-bg.png") 0% 100%;
@@ -584,12 +581,12 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 8rem; }
+  padding: 51.1px 45.7px 34.6px; }
 
 .review__box-avatar {
-  margin-right: 3rem;
-  width: 45rem;
-  height: 45rem;
+  margin-right: 20px;
+  width: 253.1px;
+  height: 259.3px;
   overflow: hidden; }
 
 .review__avatar {
@@ -608,19 +605,19 @@ table {
   line-height: normal;
   letter-spacing: normal; }
   .review__desc h4 {
-    font-size: 5.25rem;
+    font-size: 30px;
     font-weight: 500;
     text-align: left;
     color: #323232; }
   .review__desc p {
-    font-size: 3.15rem;
+    font-size: 18px;
     font-weight: normal;
     text-align: left;
     color: #666666;
     margin-bottom: 1.3125rem;
     width: 80%; }
   .review__desc .review__username {
-    font-size: 3.15rem;
+    font-size: 18px;
     font-weight: 500;
     text-align: left;
     color: #666666; }
@@ -634,22 +631,23 @@ table {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  padding-left: 1.75rem; }
+  align-items: center; }
 
 .review__carrousel-item {
-  margin-right: 0.75rem;
-  width: 11rem;
-  height: 11rem;
+  margin-right: 12.3px;
+  width: 66.7px;
+  height: 66.7px;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  .review__carrousel-item:last-child {
+    margin-right: 0; }
 
 .review__avatar--mini {
-  width: 11rem;
-  height: 11rem;
+  width: 66.7px;
+  height: 66.7px;
   border-radius: 50%;
   -o-object-fit: cover;
   object-fit: cover; }
@@ -677,13 +675,13 @@ table {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin: 0 1rem 0 -1rem; }
+  margin: 0 10px 0 -10px; }
 
 .team__item {
   -webkit-box-flex: 1;
   -ms-flex: 1 1;
   flex: 1 1;
-  margin-right: 2rem; }
+  margin-right: 20px; }
   .team__item:last-child {
     margin-right: 0; }
 
@@ -704,8 +702,8 @@ table {
 .member__pic-area {
   display: inline-block;
   position: relative;
-  width: 38.0rem;
-  height: 50.0rem; }
+  width: 220px;
+  height: 288px; }
 
 .member__pic {
   display: block;
@@ -715,8 +713,8 @@ table {
   height: 100%; }
 
 .member__name {
-  margin-top: 3.5rem;
-  font-size: 3.675rem;
+  margin-top: 35px;
+  font-size: 21px;
   font-weight: 500;
   color: #323232; }
 
@@ -725,14 +723,14 @@ table {
   overflow: hidden; }
 
 .member__info--active {
-  height: 20rem; }
+  height: 100px; }
 
 .member__occupation {
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: normal;
   color: #281e1e; }
 
 .member__description {
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: 300;
   color: #666666; }

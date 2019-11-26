@@ -13,8 +13,8 @@
 .reviews:after {
   position: absolute;
   content: '';
-  width: 20rem;
-  height: 20rem;
+  width: 200px;
+  height: 200px;
   top: 96%;
   left: 35px;
   background: url('/img/reviews/berries-reviews-bg.png') 0% 100%;
@@ -40,14 +40,14 @@
 
 .review__article {
   display: flex;
-  padding: 8rem;
+  padding: 51.1px 45.7px 34.6px;
 }
 
 .review__box-avatar {
 //  flex: 1 1;
-  margin-right: 3rem;
-  width: 45rem;
-  height: 45rem;
+  margin-right: 20px;
+  width: 253.1px;
+  height: 259.3px;
   overflow: hidden;
 }
 
@@ -66,13 +66,13 @@
   line-height: normal;
   letter-spacing: normal;
 h4 {
-    font-size: 5.25rem;
+    font-size: 30px;
     font-weight: 500;
     text-align: left;
     color: #323232;
   }
   p {
-    font-size: 3.15rem;
+    font-size: 18px;
     font-weight: normal;
     text-align: left;
     color: #666666;
@@ -80,7 +80,7 @@ h4 {
     width: 80%;
   }
   .review__username {
-    font-size: 3.15rem;
+    font-size: 18px;
     font-weight: 500;
     text-align: left;
     color: #666666;
@@ -91,20 +91,22 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 1.75rem;
 }
 
 .review__carrousel-item {
-  margin-right: 0.75rem;
-  width: 11rem;
-  height: 11rem;
+  margin-right: 12.3px;
+  width: 66.7px;
+  height: 66.7px;
   box-sizing: content-box;
   display: flex;
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .review__avatar--mini {
-  width: 11rem;
-  height: 11rem;
+  width: 66.7px;
+  height: 66.7px;
   border-radius: 50%;
   object-fit: cover;
 }

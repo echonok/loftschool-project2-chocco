@@ -11,8 +11,8 @@
 .member__pic-area {
   display: inline-block;
   position: relative;
-  width: 38.0rem;
-  height: 50.0rem;
+  width: 220px;
+  height: 288px;
 }
 
 .member__pic {
@@ -23,8 +23,8 @@
 }
 
 .member__name {
-  margin-top: 3.5rem;
-  font-size: 3.675rem;
+  margin-top: 35px;
+  font-size: 21px;
   font-weight: 500;
   color: $member-name;
 }
@@ -35,17 +35,17 @@
 }
 
 .member__info--active {
-  height: 20rem;
+  height: 100px;
 }
 
 .member__occupation {
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: normal;
   color: $member-occupation;
 }
 
 .member__description {
-  font-size: 3.15rem;
+  font-size: 18px;
   font-weight: 300;
   color: $member-description;
 }
