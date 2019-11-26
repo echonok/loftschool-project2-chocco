@@ -1,0 +1,28 @@
+.nav {
+	margin: 0 7rem;
+	flex: 1 1;
+}
+
+.nav__list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__item {
+	padding-right: 3.5rem;
+	&:last-child {
+		padding-right: 0;
+	}
+}
+
+.nav__link {
+	text-decoration: none;
+	color: $text-main-color;
+  font-size: 3.15rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+}

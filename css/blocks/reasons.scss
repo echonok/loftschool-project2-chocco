@@ -1,0 +1,124 @@
+$light-blue: #61c4d9;
+$main-color: #ffffff;
+$main-back: #61c4d9;
+
+.reasons {
+  position: relative;
+  background: url('/img/reasons/reasons-bg.png') 0% 57%;
+  background-repeat: no-repeat;
+}
+
+.reasons:after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 10%;
+  left: 0;
+  background: url('/img/reasons/berries-reasons-bg.png') 0% 99%;
+  background-repeat: no-repeat;
+  z-index: 2;
+}
+
+.reasons__subtitle {
+  font-size: 3.15rem;
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  color: #666666;
+  width: 45%;
+  margin: 0 auto;
+  margin-top: 0.375rem;
+  margin-bottom: 3.4375rem; 
+}
+
+.reasons__list {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reasons__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3);
+  margin-right: 2rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.reasons__pic {
+  position: relative;
+  background-color: #f2f5f4;
+  border-radius: 50%;
+  border: 4rem solid #f2f5f4;
+  box-sizing: content-box;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 2.1875rem;
+}
+
+.reasons__icon {
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  //width: 4.6875rem;
+  height: 7rem;
+  stroke: #2a2a29;
+  stroke-width: 1px;
+  fill: transparent;
+}
+
+.reasons__box-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reasons__short-desc {
+  font-size: 4.725rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  margin-bottom: 0.9375rem;
+}
+
+.reasons__desc {
+  font-size: 3.15rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666666;
+}
+
+.reasons__item:nth-child(2)::before {
+  position: absolute;
+  content: '';
+  width: 6.7rem;
+  height: 2.1rem;
+  top: 18%;
+  left: -10%;
+  background: url(/img/icons/dots-reasons.svg);
+  background-repeat: no-repeat;
+}
+
+.reasons__item:nth-child(2)::after {
+  position: absolute;
+  content: '';
+  width: 6.7rem;
+  height: 2.1rem;
+  top: 18%;
+  right: -10%;
+  background: url(/img/icons/dots-reasons.svg);
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,95 @@
+.promo {
+  background: $main-back;
+  background-image: url('/img/back/back_screen_1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+/*
+.promo:after {
+  content: '';
+  width: 100%;
+  height: 50%;
+  background-image: url('/img/back/berries-1scr-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;  
+  background-position: center center;
+  position: absolute;
+}
+*/
+
+.promo__container {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.promo__content {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  padding: 5rem 0;
+  //max-width: 40%;
+}
+
+.promo__title {
+  font-size: 10.5rem;
+  font-weight: bold;
+  line-height: 1;
+  text-align: left;
+  color: $main-color;
+  margin-top: 10rem;
+}
+
+.promo__subtitle {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 3.675rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: $main-color;
+  line-height: 1;
+}
+
+.promo__pic-area {
+  flex: 1 1;
+  //height: 100%;
+  //max-width: 60%;
+}
+
+.promo__pic {
+  //height: 55.7rem;
+  //margin-top: -3.4rem;
+  //margin-right: -9.5rem;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.promo__features {
+  padding: 4.3rem 0;
+}
+
+.btn {
+  margin: 4.5rem 0 1rem;
+  padding: 3rem 6rem;
+  border-radius: 5rem;
+  background-color: $main-color;
+  border: none;
+  color: $box-shadow;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 3.325rem;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  box-shadow: 0 0 4rem rgba(0, 0, 1, 0.22);
+}
+

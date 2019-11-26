@@ -1,0 +1,51 @@
+.member {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.member__pic-area {
+  display: inline-block;
+  position: relative;
+  width: 38.0rem;
+  height: 50.0rem;
+}
+
+.member__pic {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.member__name {
+  margin-top: 3.5rem;
+  font-size: 3.675rem;
+  font-weight: 500;
+  color: $member-name;
+}
+
+.member__info {
+  height: 0;
+  overflow: hidden;
+}
+
+.member__info--active {
+  height: 20rem;
+}
+
+.member__occupation {
+  font-size: 3.15rem;
+  font-weight: normal;
+  color: $member-occupation;
+}
+
+.member__description {
+  font-size: 3.15rem;
+  font-weight: 300;
+  color: $member-description;
+}

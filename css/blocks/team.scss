@@ -1,0 +1,18 @@
+.team {
+  //background: lightcoral;
+}
+
+.team__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 1rem 0 -1rem;
+}
+
+.team__item {
+  flex: 1 1;
+  margin-right: 2rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
