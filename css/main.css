@@ -882,7 +882,7 @@ table {
 .footer {
   position: absolute;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
   width: 100%; }
 
 .footer__container {
