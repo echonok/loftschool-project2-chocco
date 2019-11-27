@@ -782,9 +782,11 @@ table {
 .member__input:checked ~ .member__info {
   height: 100px; }
 
+.member__short-info {
+  margin-top: 35px; }
+
 .member__name {
   cursor: pointer;
-  margin-top: 35px;
   font-size: 21px;
   font-weight: 500;
   color: #323232; }
