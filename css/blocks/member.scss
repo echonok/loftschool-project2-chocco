@@ -48,11 +48,12 @@
   font-weight: 500;
   color: $member-name;
   &::after {
+    display: inline-block;
     content: " \25BC";
     width: 20px;
     height: 20px;
     text-align: center;
-    transition: all .35s;
+    transition: all .2s;
   }
 }
 

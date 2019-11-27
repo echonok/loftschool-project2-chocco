@@ -1,0 +1,53 @@
+.menu {
+  background-image: url('/img/back/bars-back.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  //background: black;
+}
+
+.menu-info {
+  width: 270px;
+}
+
+.vertical-accord {
+  width: 830px;
+}
+
+.vertical-accord__list {
+  display: flex;
+}
+
+.vertical-accord__item {
+  flex: 1;
+}
+
+
+.vertical-accord__trigger {
+  text-decoration: none;
+  transform: rotate(-90deg);
+}
+
+.vertical-accord__title {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: black;
+  transform: rotate(-90deg);
+}
+
+.vertical-accord__content {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
