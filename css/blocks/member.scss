@@ -28,17 +28,28 @@
   z-index: -1;
 }
 
+.member__switcher {
+  width: 10px;
+  height: 10px;
+  transition: all .2s;
+}
+
 .member__input:checked {
+
+  ~ .member__switcher
+  {
+    transform: rotate(180deg);
+    fill: orange;
+  }
+  
   + .member__name {
     color: orange;
-    &::after {
-      transform: rotate(180deg);
-      color: red;
-    }
   }
+
   ~ .member__info {
     height: 100px;
   }
+
 }
 
 .member__name {
@@ -47,14 +58,6 @@
   font-size: 21px;
   font-weight: 500;
   color: $member-name;
-  &::after {
-    display: inline-block;
-    content: " \25BC";
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    transition: all .2s;
-  }
 }
 
 .member__info {
