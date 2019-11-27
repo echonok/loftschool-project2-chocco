@@ -195,13 +195,20 @@ table {
   font-style: normal; }
 
 .contacts {
-  vertical-align: top; }
+  vertical-align: top;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .contacts__pic {
   width: 12px;
   height: 11px;
   fill: #ffffff;
-  stroke: #ffffff; }
+  stroke: #ffffff;
+  margin-right: 5px; }
 
 .contacts__pic--footer {
   fill: #0f5a47;
@@ -930,6 +937,9 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin: 0;
   padding: 0; }
 

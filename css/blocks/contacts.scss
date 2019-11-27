@@ -1,5 +1,7 @@
 .contacts {
   vertical-align: top;
+  display: flex;
+  align-items: center;
 }
 
 .contacts__pic {
@@ -7,6 +9,7 @@
   height: 11px;
   fill: $text-main-color;
   stroke: $text-main-color;
+  margin-right: 5px;
 }
 
 
