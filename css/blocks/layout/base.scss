@@ -42,7 +42,7 @@ table {
 .wrapper {
   min-height: 100%;
   width: 100%;
-  min-width: 940px + 20px;
+  //min-width: 940px + 20px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -98,4 +98,97 @@ table {
   -o-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
+}
+
+.btn {
+  margin: 4rem 0 1rem;
+  padding: 2.4rem 3.5rem;
+  border-radius: 5rem;
+  //background-color: $text-main-color;
+  border: none;
+  color: $box-shadow;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 19px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  box-shadow: 0 0 4rem rgba(0, 0, 1, 0.22);
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  
+  &:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $text-main-color;
+		border-radius: 5rem;
+		z-index: -2;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: darken($text-main-color, 10%);
+		transition: all .3s;
+		border-radius: 10rem;
+		z-index: -1;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+  }
+  
+}
+
+.btn--green {
+  color: $text-main-color;
+  box-shadow: none;
+  margin: 4rem 1rem;
+  &:after {
+    background-color: $green;
+  }
+  &:before {
+		background-color: darken($green, 10%);
+		z-index: -1;
+  }
+  &:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+.btn--transparent {
+  color: $green;
+  box-shadow: none;
+  margin: 4rem 1rem;
+  &:after {
+    background-color: $transparent;
+  }
+  &:before {
+		background-color: darken(red, 10%);
+		z-index: -1;
+  }
+  &:hover {
+    color: $text-main-color;
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+.btn--as-text {
+  margin: 4rem 1rem;
+  text-transform: none;
 }
