@@ -885,13 +885,16 @@ table {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
 
 .menu-info {
   width: 270px; }
-
-.vertical-accord {
-  width: 830px; }
 
 .vertical-accord__list {
   display: -webkit-box;
@@ -899,15 +902,43 @@ table {
   display: flex; }
 
 .vertical-accord__item {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%; }
 
 .vertical-accord__trigger {
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
   text-decoration: none;
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg); }
+  height: 100vh;
+  width: 10rem; }
+
+.vertical-accord__wrap-content {
+  opacity: 1;
+  width: 0;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  background-image: url("../../img/back/bars-back.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.vertical-accord__trigger:hover + .vertical-accord__wrap-content,
+.vertical-accord__wrap-content:hover + .vertical-accord__wrap-content,
+.vertical-accord__content:hover + .vertical-accord__wrap-content {
+  width: 43rem; }
+
+.item-1 {
+  background-image: url("../../img/back/bars-milk-1100.png"); }
+
+.item-2 {
+  background-image: url("../../img/back/bars-fruits-1100.png"); }
+
+.item-3 {
+  background-image: url("../../img/back/bars-berries-1100.png"); }
 
 .vertical-accord__title {
   display: inline-block;
