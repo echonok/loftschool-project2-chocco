@@ -11,6 +11,11 @@ $features: #b0f7ff;
 $green: #0f5a47;
 $transparent: rgba(0,0,0,0);
 
+$phones: 480px;
+$tablets: 768px;
+$laptop: 992px;
+$desktop: 1100px;
+
 @import url(./normalize.css);
 
 @import "./blocks/layout/base";
@@ -31,3 +36,4 @@ $transparent: rgba(0,0,0,0);
 @import "./blocks/footer";
 @import "./blocks/form";
 @import "./blocks/order";
+@import "./blocks/media";
