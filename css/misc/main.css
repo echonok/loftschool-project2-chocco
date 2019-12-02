@@ -1109,12 +1109,21 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 51.1px 45.7px 34.6px; }
+  padding: 3.19375rem 2.85625rem 2.1625rem; }
+  @media screen and (max-width: 768px) {
+    .review__article {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .review__box-avatar {
-  margin-right: 20px;
-  width: 253.1px;
-  height: 259.3px;
+  margin-right: 1.25rem;
+  width: 15.81875rem;
+  height: 16.20625rem;
   overflow: hidden; }
 
 .review__avatar {
@@ -1126,35 +1135,44 @@ table {
 .review__carrousel-item--current,
 .review__carrousel-item:hover {
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 0 5px #0f5a47;
-  box-shadow: 0 0 0 5px #0f5a47; }
+  -webkit-box-shadow: 0 0 0 0.3125rem #0f5a47;
+  box-shadow: 0 0 0 0.3125rem #0f5a47; }
 
 .review__desc {
   -webkit-box-flex: 1;
   -ms-flex: 1 1;
   flex: 1 1;
-  padding-top: 0.6875rem;
+  padding-top: 0.3125rem;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal; }
   .review__desc h4 {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 500;
     text-align: left;
     color: #323232; }
+    @media screen and (max-width: 768px) {
+      .review__desc h4 {
+        text-align: center; } }
   .review__desc p {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: normal;
     text-align: left;
     color: #666666;
-    margin-bottom: 1.3125rem;
+    margin-bottom: 0.8125rem;
     width: 80%; }
+    @media screen and (max-width: 768px) {
+      .review__desc p {
+        text-align: center; } }
   .review__desc .review__username {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     text-align: left;
     color: #666666; }
+    @media screen and (max-width: 768px) {
+      .review__desc .review__username {
+        text-align: center; } }
 
 .review__carrousel {
   display: -webkit-box;
@@ -1168,9 +1186,9 @@ table {
   align-items: center; }
 
 .review__carrousel-item {
-  margin-right: 12.3px;
-  width: 66.7px;
-  height: 66.7px;
+  margin-right: 0.76875rem;
+  width: 4.16875rem;
+  height: 4.16875rem;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
   display: -webkit-box;
@@ -1180,8 +1198,8 @@ table {
     margin-right: 0; }
 
 .review__avatar--mini {
-  width: 66.7px;
-  height: 66.7px;
+  width: 4.16875rem;
+  height: 4.16875rem;
   border-radius: 50%;
   -o-object-fit: cover;
   object-fit: cover; }

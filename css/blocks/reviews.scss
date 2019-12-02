@@ -2,10 +2,10 @@
   /*
   position: relative;
   */
-  background: 
-    url('/img/reviews/berrie-reviews-bg.png') 92% 0%, 
+  background:
+    url('/img/reviews/berrie-reviews-bg.png') 92% 0%,
     url('/img/reviews/reviews-bg.png') 0% 122%;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
 }
@@ -44,14 +44,19 @@
 
 .review__article {
   display: flex;
-  padding: 51.1px 45.7px 34.6px;
+  padding: rem(51.1px) rem(45.7px) rem(34.6px);
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .review__box-avatar {
-//  flex: 1 1;
-  margin-right: 20px;
-  width: 253.1px;
-  height: 259.3px;
+  //  flex: 1 1;
+  margin-right: rem(20px);
+  width: rem(253.1px);
+  height: rem(259.3px);
   overflow: hidden;
 }
 
@@ -64,36 +69,53 @@
 .review__carrousel-item--current,
 .review__carrousel-item:hover {
   border-radius: 50%;
-  box-shadow: 0 0 0 5px #0f5a47;
+  box-shadow: 0 0 0 rem(5px) #0f5a47;
 }
 
 .review__desc {
   flex: 1 1;
-  padding-top: 0.6875rem;
+  padding-top: rem(5px);
   //max-width: 90rem;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-h4 {
-    font-size: 30px;
+
+  h4 {
+    font-size: rem(30px);
     font-weight: 500;
     text-align: left;
     color: #323232;
+
+    @include tablets {
+      text-align: center;
+    }
   }
+
   p {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: normal;
     text-align: left;
     color: #666666;
-    margin-bottom: 1.3125rem;
+    margin-bottom: rem(13px);
     width: 80%;
+
+    @include tablets {
+      text-align: center;
+    }
+
   }
+
   .review__username {
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 500;
     text-align: left;
     color: #666666;
+
+    @include tablets {
+      text-align: center;
+    }
+
   }
 }
 
@@ -104,21 +126,22 @@ h4 {
 }
 
 .review__carrousel-item {
-  margin-right: 12.3px;
-  width: 66.7px;
-  height: 66.7px;
+  margin-right: rem(12.3px);
+  width: rem(66.7px);
+  height: rem(66.7px);
   box-sizing: content-box;
   display: flex;
+
   &:last-child {
     margin-right: 0;
   }
 }
 
 .review__avatar--mini {
-  width: 66.7px;
-  height: 66.7px;
+  width: rem(66.7px);
+  height: rem(66.7px);
   border-radius: 50%;
-  object-fit: cover;  
+  object-fit: cover;
 }
 
 
