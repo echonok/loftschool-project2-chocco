@@ -11,6 +11,9 @@
   vertical-align: top;
   display: flex;
   align-items: center;
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .contacts__pic {
@@ -21,6 +24,9 @@
   margin-right: 5px;
 }
 
+.contacts__phone-section {
+  display: flex;
+}
 
 .contacts__pic--footer { 
   fill: #0f5a47;

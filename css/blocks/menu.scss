@@ -8,13 +8,14 @@
   flex-direction: row;
   //background: black;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 0;
   justify-content: space-between;
 }
 
 .menu-info {
-  width: rem(270px);
+  //width: rem(270px);
+  min-width: 30%;
 }
 
 .vertical-accord {
@@ -24,11 +25,13 @@
 
 .vertical-accord__list {
   display: flex;
+  height: 100%;
 }
 
 .vertical-accord__item {
   //display: flex;
   //height: 100%;
+  flex: 1 1;
 }
 
 .vertical-accord__trigger { 
@@ -98,4 +101,5 @@
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  display: block;
 }

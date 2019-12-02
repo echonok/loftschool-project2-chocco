@@ -11,6 +11,10 @@
   justify-content: space-between;
   align-items: center;
   padding: rem(20px) rem(80px) rem(20px);
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer__contacts {
@@ -40,6 +44,9 @@
   flex: 1 1;
   margin-left: auto;
   margin-right: 0;
+  @include phones {
+    margin: rem(10px) auto;
+  }
 }
 
 .social__list {

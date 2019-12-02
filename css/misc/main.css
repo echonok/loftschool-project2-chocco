@@ -603,6 +603,11 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .contacts__footer {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .contacts__pic {
   width: 12px;
@@ -610,6 +615,11 @@ table {
   fill: #ffffff;
   stroke: #ffffff;
   margin-right: 5px; }
+
+.contacts__phone-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .contacts__pic--footer {
   fill: #0f5a47;
@@ -1164,7 +1174,8 @@ table {
     width: 80%; }
     @media screen and (max-width: 768px) {
       .review__desc p {
-        text-align: center; } }
+        text-align: center;
+        width: 100%; } }
   .review__desc .review__username {
     font-size: 1.125rem;
     font-weight: 500;
@@ -1172,6 +1183,7 @@ table {
     color: #666666; }
     @media screen and (max-width: 768px) {
       .review__desc .review__username {
+        display: block;
         text-align: center; } }
 
 .review__carrousel {
@@ -1333,14 +1345,14 @@ table {
   -ms-flex-direction: row;
   flex-direction: row;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 0;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
 
 .menu-info {
-  width: 16.875rem; }
+  min-width: 30%; }
 
 .vertical-accord {
   height: 100%; }
@@ -1348,7 +1360,13 @@ table {
 .vertical-accord__list {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  height: 100%; }
+
+.vertical-accord__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1;
+  flex: 1 1; }
 
 .vertical-accord__trigger {
   background-repeat: no-repeat;
@@ -1410,7 +1428,8 @@ table {
   line-height: 1.5;
   letter-spacing: normal;
   text-align: left;
-  color: #ffffff; }
+  color: #ffffff;
+  display: block; }
 
 .map {
   background-image: url("../../img/map/map.png");
@@ -1437,6 +1456,15 @@ table {
   -ms-flex-align: center;
   align-items: center;
   padding: 1.25rem 5rem 1.25rem; }
+  @media screen and (max-width: 480px) {
+    .footer__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .footer__contacts {
   -webkit-box-flex: 1;
@@ -1469,6 +1497,9 @@ table {
   flex: 1 1;
   margin-left: auto;
   margin-right: 0; }
+  @media screen and (max-width: 480px) {
+    .footer__social {
+      margin: 0.625rem auto; } }
 
 .social__list {
   display: -webkit-box;
