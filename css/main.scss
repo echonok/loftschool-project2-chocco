@@ -16,7 +16,7 @@ $tablets: 768px;
 $laptops: 992px;
 $desktops: 1100px;
 
-@import url(./normalize.css);
+@import "./normalize";
 @import "./blocks/media";
 
 @import "./blocks/layout/base";
