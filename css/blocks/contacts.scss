@@ -17,8 +17,8 @@
 }
 
 .contacts__pic {
-  width: 12px;
-  height: 11px;
+  width: rem(12px);
+  height: rem(11px);
   fill: $text-main-color;
   stroke: $text-main-color;
   margin-right: 5px;
@@ -37,7 +37,7 @@
   display: inline-block;
   color: $text-main-color;  
   text-decoration: none;
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
