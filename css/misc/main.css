@@ -104,6 +104,9 @@ table {
   flex-direction: column;
   padding: 24px 80px;
   vertical-align: middle;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   max-width: 68.75rem; }
 
@@ -458,7 +461,10 @@ table {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .promo__title {
   font-size: 60px;
