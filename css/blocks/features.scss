@@ -8,15 +8,15 @@
   color: $text-main-color;
   display: flex;
   flex: 1 1;
-  margin-right: 30px;
+  margin-right: rem(25px);
   &:last-child {
     margin-right: 0;
   }
 }
 
 .feature__pic-area {
-  width: 100px;
-  height: 50px;
+  width: rem(90px);
+  height: rem(70px);
 }
 
 .feature__pic {
@@ -29,7 +29,7 @@
 }
 
 .feature__desc {
-  padding-left: 10px;  
+  padding-left: rem(10px);  
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;

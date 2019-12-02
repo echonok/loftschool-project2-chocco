@@ -13,17 +13,21 @@
 .reviews:after {
   position: absolute;
   content: '';
-  width: 200px;
-  height: 200px;
+  width: rem(200px);
+  height: rem(200px);
   top: 96%;
-  left: 35px;
+  left: rem(35px);
   background: url('/img/reviews/berries-reviews-bg.png') 0% 100%;
   background-repeat: no-repeat;
   z-index: 2;
 }
 
 .reviews__title {
+  padding-top: rem(10px);
+}
 
+.review {
+  padding: rem(24px) 0;
 }
 
 .review__list {

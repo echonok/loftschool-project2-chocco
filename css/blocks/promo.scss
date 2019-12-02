@@ -41,21 +41,25 @@
   //padding: 5rem 0;
   //max-width: 40%;
   justify-content: center;
+  @include phones {
+    height: rem(230px);
+  }
 }
 
 .promo__title {
-  font-size: 60px;
+  font-size: rem(60px);
   font-weight: bold;
   line-height: 1;
   text-align: left;
   color: $text-main-color;
-  margin-top: rem(10px);
+  margin-top: rem(150px);
+  margin-bottom: rem(10px);
 }
 
 .promo__subtitle {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 21px;
+  //margin-top: 0;
+  //margin-bottom: rem(10px);
+  font-size: rem(21px);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -69,6 +73,14 @@
   flex: 1 1;
   //height: 100%;
   //max-width: 60%;
+  //padding-top: rem(115px);
+  @include tablets {
+    text-align: center;
+    padding: rem(30px) 20% 0;
+  }
+  @include phones {
+    padding: 0 3%;
+  }
 }
 
 .promo__pic {
@@ -80,6 +92,16 @@
   object-fit: contain;
 }
 
+.promo__content,
+.promo__pic-area {
+  float: left;
+  width: 50%;
+  @include tablets {
+    float: none;
+    width: 100%;
+  }
+}
+
 .promo__features {
-  padding: 4.3rem 0;
+  padding: rem(43px) 0;
 }

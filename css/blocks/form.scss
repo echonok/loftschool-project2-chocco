@@ -33,11 +33,11 @@
   //margin-left: 2.3rem;
   //flex-basis: 16rem;
   //min-width: 40%;
-  padding: 0 1.0rem;
+  padding: 0 rem(10px);
 }
 
 .form__block-title {
-  font-size: 1.8rem;
+  font-size: rem(18px);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -56,11 +56,11 @@ label {
   width: 100%;
   background: #fff;
   border-style: none;
-  padding: 1.5rem 1.1rem;
-  margin: 0.8rem 0 1rem;
+  padding: rem(15px) rem(11px);
+  margin: rem(8px) 0 rem(10px);
   outline: none;
 
-  font-size: 1.8rem;
+  font-size: rem(18px);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -72,18 +72,18 @@ label {
  }
 
  .form__input:focus {
-  box-shadow: 0 0 0 3px #dde3bd;
+  box-shadow: 0 0 0 rem(3px) #dde3bd;
 }
 
 .option {
   display: flex;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: rem(10px);
 }
 
 .option__title {
-  margin: 0 2rem 0 0.5rem;
-  font-size: 1.8rem;
+  margin: 0 rem(20px) 0 rem(5px);
+  font-size: rem(18px);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -94,9 +94,9 @@ label {
 }
 
 .option__radio {
-  width: 1rem;
-  height: 1rem;
-  margin: 0 -1rem 1rem 0;
+  width: rem(10px);
+  height: rem(10px);
+  margin: 0 rem(-10px) rem(10px) 0;
   opacity: 0;
 }
 
@@ -110,10 +110,10 @@ label {
 
 .option__styler {
   
-  margin: 1rem;
+  margin: rem(10px);
   display: inline-block;
-  height: 2.6rem;
-  width: 2.6rem;
+  height: rem(26px);
+  width: rem(26px);
   //line-height: 2rem;
   border-radius: 50%;
   background: $text-main-color;
@@ -123,8 +123,8 @@ label {
 .option__styler::after {
   content: '';
   display: block;
-  width: 1.4rem;
-  height: 1.4rem;
+  width: rem(14px);
+  height: rem(14px);
   background: $green;
   position: absolute;
   top: 50%;
@@ -137,16 +137,16 @@ label {
 .form-dont-call-back {
   display: block;
   position: relative;
-  padding-left: 5.1rem;
-  margin-bottom: 12px;
+  padding-left: rem(50px);
+  margin-bottom: rem(12px);
   cursor: pointer;
-  font-size: 22px;
+  font-size: rem(22px);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 
-  font-size: 1.8rem;
+  font-size: rem(18px);
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -167,9 +167,9 @@ label {
 .checkmark {
   position: absolute;
   top: 0;
-  left: 1rem;
-  height: 2.6rem;
-  width: 2.6rem;
+  left: rem(10px);
+  height: rem(26px);
+  width: rem(26px);
   background-color: #fff;
 }
 
@@ -192,12 +192,12 @@ label {
 }
 
 .form-dont-call-back .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
+  left: rem(9px);
+  top: rem(5px);
+  width: rem(5px);
+  height: rem(10px);
   border: solid $green;
-  border-width: 0 3px 3px 0;
+  border-width: 0 rem(3px) rem(3px) 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);

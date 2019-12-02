@@ -2,16 +2,22 @@
   //background: lightcoral;
 }
 
+.team__title {
+  padding-top: rem(10px);
+}
+
 .team__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 10px 0 -10px;
+  //margin: 0 10px 0 -10px;
+  margin: 0 auto;
+  padding: rem(40px) 0 0;
 }
 
 .team__item {
   flex: 1 1;
-  margin-right: 20px;
+  margin-right: rem(20px);
   &:last-child {
     margin-right: 0;
   }
