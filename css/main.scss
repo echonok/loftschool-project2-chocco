@@ -13,10 +13,11 @@ $transparent: rgba(0,0,0,0);
 
 $phones: 480px;
 $tablets: 768px;
-$laptop: 992px;
-$desktop: 1100px;
+$laptops: 992px;
+$desktops: 1100px;
 
 @import url(./normalize.css);
+@import "./blocks/media";
 
 @import "./blocks/layout/base";
 @import "./blocks/layout/font";
@@ -36,4 +37,4 @@ $desktop: 1100px;
 @import "./blocks/footer";
 @import "./blocks/form";
 @import "./blocks/order";
-@import "./blocks/media";
+@import "./blocks/hamburger";

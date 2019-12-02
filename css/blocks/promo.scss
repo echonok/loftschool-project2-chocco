@@ -23,7 +23,15 @@
 .promo__container {
   display: flex;
   flex-direction: row;
-  
+  @include laptops {
+		flex-direction: row;
+  }
+  @include tablets {
+		flex-direction: column-reverse;
+	}
+  @include phones {
+		flex-direction: column-reverse;
+	}
 }
 
 .promo__content {

@@ -1,4 +1,13 @@
-.contacts {
+.contacts__header {
+  vertical-align: top;
+  display: flex;
+  align-items: center;
+  @include tablets {
+		display: none;
+	}
+}
+
+.contacts__footer {
   vertical-align: top;
   display: flex;
   align-items: center;

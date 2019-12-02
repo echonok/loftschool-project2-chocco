@@ -1,12 +1,12 @@
 // media
-@mixin desktop {
-	@media screen and (max-width: $desktop) {
+@mixin desktops {
+	@media screen and (max-width: $desktops) {
 		@content;
 	}
 }
 
-@mixin laptop {
-	@media screen and (max-width: $laptop) {
+@mixin laptops {
+	@media screen and (max-width: $laptops) {
 		@content;
 	}
 }
@@ -21,4 +21,8 @@
 	@media screen and (max-width: $phones) {
 		@content;
 	}
+}
+
+@function rem($px) {
+  @return $px / 16px + 0rem;
 }
