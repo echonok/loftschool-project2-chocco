@@ -23,14 +23,10 @@
 .promo__container {
   display: flex;
   flex-direction: row;
-  @include laptops {
-		flex-direction: row;
-  }
   @include tablets {
-		flex-direction: column-reverse;
-	}
-  @include phones {
-		flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: rem(50px) rem(100px);
 	}
 }
 
@@ -40,9 +36,19 @@
   flex-direction: column;
   //padding: 5rem 0;
   //max-width: 40%;
-  justify-content: center;
+  //justify-content: center;
+  justify-content: space-evenly;
   @include phones {
     height: rem(230px);
+  }
+}
+
+.promo__best-offer {
+  //display: flex;
+  //flex-direction: column;
+  @include phones {
+    height: rem(230px);
+    text-align: center;
   }
 }
 
@@ -52,8 +58,11 @@
   line-height: 1;
   text-align: left;
   color: $text-main-color;
-  margin-top: rem(150px);
+  //margin-top: rem(150px);
   margin-bottom: rem(10px);
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .promo__subtitle {
@@ -67,6 +76,9 @@
   letter-spacing: normal;
   color: $text-main-color;
   line-height: 1;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .promo__pic-area {
@@ -80,6 +92,13 @@
   }
   @include phones {
     padding: 0 3%;
+  }
+}
+
+.promo-btn {
+  @include tablets {
+    text-align: center;
+    //padding: rem(30px) 20% rem(30px);
   }
 }
 

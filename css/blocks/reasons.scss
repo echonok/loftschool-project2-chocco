@@ -8,6 +8,12 @@ $main-back: #61c4d9;
   background-repeat: no-repeat;
 }
 
+.reasons__container {
+  @include tablets {
+    width: 62%;
+  }
+}
+
 /*
 .reasons:after {
   position: absolute;
@@ -22,25 +28,30 @@ $main-back: #61c4d9;
 }
 */
 
+.reasons__title {
+  padding: 5% 0 1%;
+}
+
 .reasons__subtitle {
   font-size: rem(18px);
   font-weight: normal;
   font-style: normal;
   text-align: center;
   color: #666666;
-  width: 45%;
+  //width: 45%;
   margin: 0 auto;
-  padding: rem(5px) 0 rem(35px);
+  padding: 1% 0 5%;
 }
 
 .reasons__list {
-  padding: rem(10px) 0;
+  padding: 5% 0;
   display: flex;
   justify-content: space-between;
-	flex-direction: row;
+  flex-direction: row;
+
   @include tablets {
-		flex-direction: column;
-	}
+    flex-direction: column;
+  }
 }
 
 .reasons__item {
@@ -49,9 +60,18 @@ $main-back: #61c4d9;
   flex-direction: column;
   align-items: center;
   width: calc(100% / 3);
-  margin-right: rem(80px);
+  margin-right: rem(20px);
+
   &:last-child {
     margin-right: 0;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    flex-direction: row;
   }
 }
 
@@ -64,6 +84,9 @@ $main-back: #61c4d9;
   width: rem(70px);
   height: rem(70px);
   margin-bottom: rem(20px);
+  @include phones {
+    //flex: 1 1;
+  }
 }
 
 .reasons__icon {
@@ -76,7 +99,7 @@ $main-back: #61c4d9;
   stroke-width: 1px;
   fill: none;
   stroke-width: 0.7px;
-  stroke-miterlimit: 10px;
+  stroke-miterlimit: rem(10px);
 }
 
 .reasons__box-desc {
@@ -86,7 +109,7 @@ $main-back: #61c4d9;
 }
 
 .reasons__short-desc {
-  font-size: 27px;
+  font-size: rem(27px);
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -94,11 +117,11 @@ $main-back: #61c4d9;
   letter-spacing: normal;
   text-align: center;
   color: #000000;
-  margin-bottom: 10px;
+  margin-bottom: rem(10px);
 }
 
 .reasons__desc {
-  font-size: 18px;
+  font-size: rem(18px);
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -109,29 +132,31 @@ $main-back: #61c4d9;
 }
 
 .reasons__item:nth-child(2)::before {
-    position: absolute;
-    content: '';
-    width: 70px;
-    height: 20px;
-    top: 18%;
-    left: -10%;
-    background: url(/img/icons/dots-reasons.svg);
-    background-repeat: no-repeat;
-    @include tablets {
-      display: none;
-    }
+  position: absolute;
+  content: '';
+  width: rem(70px);
+  height: rem(20px);
+  top: 18%;
+  left: -10%;
+  background: url(/img/icons/dots-reasons.svg);
+  background-repeat: no-repeat;
+
+  @include tablets {
+    display: none;
   }
-  
-  .reasons__item:nth-child(2)::after {
-    position: absolute;
-    content: '';
-    width: 70px;
-    height: 20px;
-    top: 18%;
-    right: -10%;
-    background: url(/img/icons/dots-reasons.svg);
-    background-repeat: no-repeat;
-    @include tablets {
-      display: none;
-    }
+}
+
+.reasons__item:nth-child(2)::after {
+  position: absolute;
+  content: '';
+  width: rem(70px);
+  height: rem(20px);
+  top: 18%;
+  right: -10%;
+  background: url(/img/icons/dots-reasons.svg);
+  background-repeat: no-repeat;
+
+  @include tablets {
+    display: none;
   }
+}

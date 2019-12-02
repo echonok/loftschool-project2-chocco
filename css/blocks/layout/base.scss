@@ -11,10 +11,10 @@ html, body {
 html {
   font-size: 16px;
   @include laptops {
-    font-size: 15px;
+    font-size: 16px;
   }
   @include tablets {
-    font-size: 14px;
+    font-size: 16px;
   }
   @include phones {
     font-size: 13px;
@@ -56,14 +56,15 @@ table {
 .wrapper {
   min-height: 100%;
   width: 100%;
-  //min-width: 940px + 20px;
   position: relative;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  
+  //min-width: 940px + 20px;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
   //align-content: center;
-  margin: auto;
+  //margin: auto;
 }
 
 .section {
@@ -71,6 +72,7 @@ table {
   min-height: rem(650px);
   display: flex;
   justify-content: center;
+  
   overflow: hidden;
   //flex-direction: column;
   //justify-content: space-between;
@@ -80,7 +82,7 @@ table {
   //border: 1px dotted black;
   @include tablets {
 		min-height: initial;
-	}  
+	}
 }
 
 .section-title {
@@ -104,17 +106,20 @@ table {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  
   //width: 1100px;
   //width: 94%;
   padding: rem(24px) rem(80px);
   //padding: 2.4rem 8rem;
   vertical-align: middle;
-  justify-content: center;
+  //justify-content: center;
+  justify-content: space-evenly;
 
   position: relative;
   max-width: rem(1100px);
   //width: 95%;
+  @include tablets {
+		padding: rem(24px) rem(25px);;
+	}
 }
 
 .mirror {
@@ -144,6 +149,7 @@ table {
   overflow: hidden;
   z-index: 1;
   position: relative;
+  //display: inline-block;
   
   &:after {
 		content: '';

@@ -1,6 +1,9 @@
 .form {
   display: flex;
   flex-direction: row;
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .form__part {
@@ -13,19 +16,25 @@
 .form__row {
   display: flex;
   flex-direction: row;
-  align-content: space-between;
+  //align-content: space-between;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   //flex: 1 1;
   width: 100%;
   //margin: 0 -1.1rem;
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .form__row--buttons {
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .form__block {
