@@ -1030,7 +1030,7 @@ table {
   color: #ffffff; }
 
 .map {
-  background-image: url("../../img/map/map.png");
+  background-image: url("../img/map/map.png");
   background-size: cover; }
 
 .footer {
