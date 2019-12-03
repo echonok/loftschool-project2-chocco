@@ -401,7 +401,7 @@ table {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 1.5rem 5rem;
+  padding: 5% 10%;
   vertical-align: middle;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -409,7 +409,10 @@ table {
   max-width: 68.75rem; }
   @media screen and (max-width: 768px) {
     .container {
-      padding: 1.5rem 1.5625rem; } }
+      padding: 5% 10%; } }
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 2% 2%; } }
 
 .mirror {
   -moz-transform: scale(-1, 1);
