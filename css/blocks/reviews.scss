@@ -23,15 +23,15 @@
 }
 
 .reviews__title {
-  padding-top: rem(10px);
+  padding-top: 3%;
 }
 
 .review {
-  padding: rem(24px) 0;
+  padding: 5% 0;
 }
 
 .review__list {
-  margin-bottom: 1.25rem;
+  margin-bottom: 5%;
 }
 
 .review__item {
@@ -45,6 +45,7 @@
 .review__article {
   display: flex;
   padding: rem(51.1px) rem(45.7px) rem(34.6px);
+  padding: 10% 10% 8%;
 
   @include tablets {
     flex-direction: column;

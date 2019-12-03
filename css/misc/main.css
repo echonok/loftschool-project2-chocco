@@ -359,7 +359,6 @@ table {
 
 .section {
   height: 100vh;
-  min-height: 40.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,6 +366,10 @@ table {
   -ms-flex-pack: center;
   justify-content: center;
   overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   /* width: 110rem; */
   width: 100%;
   margin: 0 auto; }
@@ -384,7 +387,7 @@ table {
   letter-spacing: normal;
   text-align: center;
   color: #0d0d0d;
-  padding: 5rem 0 0.3125rem; }
+  padding: 5% 0 5%; }
 
 .section-title--white {
   color: #ffffff; }
@@ -400,9 +403,8 @@ table {
   flex-direction: column;
   padding: 1.5rem 5rem;
   vertical-align: middle;
-  -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   position: relative;
   max-width: 68.75rem; }
   @media screen and (max-width: 768px) {
@@ -648,7 +650,8 @@ table {
   width: 100%;
   padding-top: 0;
   z-index: 1;
-  color: #ffffff; }
+  color: #ffffff;
+  top: 0; }
 
 .header__container {
   display: -webkit-box;
@@ -664,10 +667,10 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 1.5rem 5rem 0; }
+  padding: 2% 7.5% 0; }
   @media screen and (max-width: 768px) {
     .header__container {
-      padding: 1.5rem 1.5625rem 0; } }
+      padding: 5% 5% 0; } }
 
 .logo__text {
   font-family: 'Museo Sans 500';
@@ -753,7 +756,7 @@ table {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      padding: 3.125rem 6.25rem; } }
+      padding: 10% 10%; } }
   @media screen and (max-width: 480px) {
     .promo__container {
       -webkit-box-orient: vertical;
@@ -763,7 +766,7 @@ table {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      padding: 0.625rem 30%; } }
+      padding: 5% 5%; } }
 
 .promo__content {
   -webkit-box-flex: 1;
@@ -782,7 +785,7 @@ table {
 
 @media screen and (max-width: 480px) {
   .promo__best-offer {
-    height: 14.375rem;
+    height: 50%;
     text-align: center; } }
 
 .promo__title {
@@ -791,17 +794,17 @@ table {
   line-height: 1;
   text-align: left;
   color: #ffffff;
-  margin-bottom: 0.625rem; }
+  margin-bottom: 5%; }
   @media screen and (max-width: 768px) {
     .promo__title {
       text-align: center;
       padding-top: 0;
-      margin-bottom: 0.3125rem; } }
+      margin-bottom: 5%; } }
   @media screen and (max-width: 480px) {
     .promo__title {
       text-align: center;
       padding-top: 0;
-      margin-bottom: 0.3125rem; } }
+      margin-bottom: 5%; } }
 
 .promo__subtitle {
   font-size: 1.3125rem;
@@ -823,8 +826,8 @@ table {
   @media screen and (max-width: 768px) {
     .promo__pic-area {
       text-align: center;
-      padding: 1.875rem 20% 0;
-      height: 300%; } }
+      padding: 5% 20% 0;
+      height: 50%; } }
   @media screen and (max-width: 480px) {
     .promo__pic-area {
       padding: 0 3%;
@@ -851,7 +854,7 @@ table {
       width: 100%; } }
 
 .promo__features {
-  padding: 2.6875rem 0; }
+  padding: 10% 0; }
 
 .fixed-menu {
   position: fixed;
@@ -1146,13 +1149,13 @@ table {
   z-index: 2; }
 
 .reviews__title {
-  padding-top: 0.625rem; }
+  padding-top: 3%; }
 
 .review {
-  padding: 1.5rem 0; }
+  padding: 5% 0; }
 
 .review__list {
-  margin-bottom: 1.25rem; }
+  margin-bottom: 5%; }
 
 .review__item {
   /* position: relative; */
@@ -1165,7 +1168,8 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 3.19375rem 2.85625rem 2.1625rem; }
+  padding: 3.19375rem 2.85625rem 2.1625rem;
+  padding: 10% 10% 8%; }
   @media screen and (max-width: 768px) {
     .review__article {
       -webkit-box-orient: vertical;
@@ -1457,7 +1461,7 @@ table {
     color: white; }
 
 .vertical-accord__trigger {
-  width: 5rem;
+  width: 6.25rem;
   display: block;
   height: 100%;
   float: left;
@@ -1468,7 +1472,7 @@ table {
   background-position: center center; }
   @media screen and (max-width: 480px) {
     .vertical-accord__trigger {
-      width: 4.375rem; } }
+      width: 5rem; } }
 
 .vertical-accord__trigger-text {
   font-size: 2.5rem;

@@ -69,17 +69,14 @@ table {
 
 .section {
   height: 100vh;
-  min-height: rem(650px);
+  //min-height: rem(650px);
   display: flex;
-  justify-content: center;
-  
+  justify-content: center;  
   overflow: hidden;
-  //flex-direction: column;
-  //justify-content: space-between;
+  flex-direction: column;
   /* width: 110rem; */
   width: 100%;
   margin: 0 auto;
-  //border: 1px dotted black;
   @include tablets {
 		min-height: initial;
 	}
@@ -95,7 +92,7 @@ table {
   letter-spacing: normal;
   text-align: center;
   color: $almost-black;
-  padding: rem(80px) 0 rem(5px);
+  padding: 5% 0 5%;
 }
 
 .section-title--white {
@@ -112,7 +109,7 @@ table {
   //padding: 2.4rem 8rem;
   vertical-align: middle;
   //justify-content: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
 
   position: relative;
   max-width: rem(1100px);

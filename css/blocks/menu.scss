@@ -71,7 +71,7 @@
 }
 
 .vertical-accord__trigger {
-	width: rem(80px);
+	width: rem(100px);
 	display: block;
 	height: 100%;
 	float: left;
@@ -82,7 +82,7 @@
   background-position: center center;
   //filter: brightness(60%);
   @include phones {
-    width: rem(70px);
+    width: rem(80px);
   }
 }
 
