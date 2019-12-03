@@ -1139,7 +1139,7 @@ table {
   /*
   position: relative;
   */
-  background: url("/img/reviews/berrie-reviews-bg.png") 92% 0%, url("/img/reviews/reviews-bg.png") 0% 122%;
+  background: url("/img/reviews/berrie-reviews-bg.png") 92% 0%, url("/img/reviews/berries-reviews-bg.png") 0% 100%, url("/img/reviews/reviews-bg.png") 0% 122%;
   background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1149,17 +1149,19 @@ table {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+/*
 .reviews:after {
   position: absolute;
   content: '';
-  width: 12.5rem;
-  height: 12.5rem;
+  width: rem(200px);
+  height: rem(200px);
   top: 96%;
-  left: 2.1875rem;
-  background: url("/img/reviews/berries-reviews-bg.png") 0% 100%;
+  left: rem(35px);
+  background: url('/img/reviews/berries-reviews-bg.png') 0% 100%;
   background-repeat: no-repeat;
-  z-index: 2; }
-
+  z-index: 2;
+}
+*/
 .review {
   padding: 0 0;
   display: -webkit-box;

@@ -4,12 +4,15 @@
   */
   background:
     url('/img/reviews/berrie-reviews-bg.png') 92% 0%,
+    url('/img/reviews/berries-reviews-bg.png') 0% 100%,
     url('/img/reviews/reviews-bg.png') 0% 122%;
   background-repeat: no-repeat;
+
   display: flex;
   flex-direction: column;
 }
 
+/*
 .reviews:after {
   position: absolute;
   content: '';
@@ -21,6 +24,7 @@
   background-repeat: no-repeat;
   z-index: 2;
 }
+*/
 
 .reviews__title {
   //padding-top: 3%;
