@@ -401,7 +401,7 @@ table {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 5% 10%;
+  padding: 5% 5%;
   vertical-align: middle;
   -ms-flex-pack: distribute;
   justify-content: space-around;
@@ -670,7 +670,7 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 2% 7.5% 0; }
+  padding: 2% 6% 0; }
   @media screen and (max-width: 768px) {
     .header__container {
       padding: 5% 5% 0; } }
@@ -784,7 +784,9 @@ table {
   flex-direction: column;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+  align-content: center; }
 
 @media screen and (max-width: 480px) {
   .promo__best-offer {
@@ -942,14 +944,6 @@ table {
   position: relative;
   background: url("/img/reasons/reasons-bg.png") 0% 57%;
   background-repeat: no-repeat; }
-
-@media screen and (max-width: 768px) {
-  .reasons__container {
-    width: 62%; } }
-
-@media screen and (max-width: 480px) {
-  .reasons__container {
-    width: 90%; } }
 
 /*
 .reasons:after {

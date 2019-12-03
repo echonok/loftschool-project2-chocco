@@ -11,10 +11,10 @@ $main-back: #61c4d9;
 .reasons__container {
   
   @include tablets {
-    width: 62%;
+    //width: 62%;
   }
   @include phones {
-    width: 90%;
+    //width: 90%;
   }
 }
 
