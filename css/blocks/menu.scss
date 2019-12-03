@@ -1,6 +1,25 @@
 .menu {
-  background-image: url('../../img/back/bars-back.png');
-  background-size: cover;
+  display: block;
+  //padding-left: 8rem;
+  //padding-top: 8rem;
+  position: relative;
+
+  &:before {
+    display: block;
+    content: "";
+    background-image: url('../../img/back/bars-back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+    height: 100%;
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .menu__container {
@@ -11,6 +30,12 @@
   margin: 0 0;
   padding: 0;
   justify-content: space-between;
+  @include phones {
+    padding: 15% 2% 2% 5%;
+  }
+  @include tablets {
+    padding: 10% 2% 5% 5%;
+  }
 }
 
 .menu-info {
@@ -25,13 +50,29 @@
 
 .vertical-accord__list {
   display: flex;
-  height: 100%;
+  //height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .vertical-accord__item {
-  //display: flex;
-  //height: 100%;
+  display: flex;
+  height: 100%;
   flex: 1 1;
+}
+
+.item-1 { 
+  background-image: url('../../img/back/bars-milk-1100.png');
+}
+
+.item-2 { 
+  background-image: url('../../img/back/bars-fruits-1100.png');
+}
+
+.item-3 { 
+  background-image: url('../../img/back/bars-berries-1100.png');
 }
 
 .vertical-accord__trigger { 
@@ -42,6 +83,44 @@
   text-decoration: none;
   height: 100%;
   width: rem(100px);
+  display: flex;
+  justify-content: center;
+  padding-bottom: rem(40px);
+  padding-bottom: 40%;
+
+  &:before {
+    display: block;
+    content: "";
+    background-image: url('../../img/back/bars-back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+    height: 100%;
+    z-index: -10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+}
+
+.vertical-accord__title {
+  display: inline-block;
+  font-size: rem(40px);
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: white;
+  //transform: rotate(-90deg);
+  writing-mode: tb;
+  transform: rotate(180deg);
+  //margin-left: rem(40px);
 }
 
 .vertical-accord__wrap-content {
@@ -66,31 +145,6 @@
   }
 }
 */
-
-.item-1 { 
-  background-image: url('../../img/back/bars-milk-1100.png');
-}
-
-.item-2 { 
-  background-image: url('../../img/back/bars-fruits-1100.png');
-}
-
-.item-3 { 
-  background-image: url('../../img/back/bars-berries-1100.png');
-}
-
-.vertical-accord__title {
-  display: inline-block;
-  font-size: rem(20px);
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: black;
-  transform: rotate(-90deg);
-}
 
 .vertical-accord__content {  
   font-size: rem(16px);

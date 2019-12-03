@@ -6,6 +6,13 @@
   }
 }
 
+.order-title {
+  @include tablets {
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .form__part {
   flex: 1 1;
   display: flex;
@@ -34,6 +41,9 @@
   justify-content: flex-start;
   @include tablets {
     justify-content: center;
+    .btn {
+      margin: 0;
+    }
   }
 }
 

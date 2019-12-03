@@ -118,7 +118,10 @@ table {
   max-width: rem(1100px);
   //width: 95%;
   @include tablets {
-		padding: rem(24px) rem(25px);;
+		padding: rem(24px) rem(25px);
+  }
+  @include phones {
+		//padding: rem(24px) rem(25px);
 	}
 }
 

@@ -6,6 +6,8 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .member__pic-area {
@@ -13,6 +15,10 @@
   position: relative;
   width: ren(220px);
   height: rem(288px);
+  @include phones {
+    width: rem(140px);
+    height: rem(180px);
+  }
 }
 
 .member__pic {

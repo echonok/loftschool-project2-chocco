@@ -9,8 +9,12 @@ $main-back: #61c4d9;
 }
 
 .reasons__container {
+  
   @include tablets {
     width: 62%;
+  }
+  @include phones {
+    width: 90%;
   }
 }
 
@@ -72,6 +76,7 @@ $main-back: #61c4d9;
 
   @include phones {
     flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -84,8 +89,9 @@ $main-back: #61c4d9;
   width: rem(70px);
   height: rem(70px);
   margin-bottom: rem(20px);
+  flex: 0 0 auto;
   @include phones {
-    //flex: 1 1;
+    
   }
 }
 
@@ -103,9 +109,15 @@ $main-back: #61c4d9;
 }
 
 .reasons__box-desc {
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include phones {
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 4%;
+  }
 }
 
 .reasons__short-desc {
@@ -118,6 +130,10 @@ $main-back: #61c4d9;
   text-align: center;
   color: #000000;
   margin-bottom: rem(10px);
+  @include phones {
+    text-align: left;
+    //margin-bott: 0;
+  }
 }
 
 .reasons__desc {
@@ -129,6 +145,11 @@ $main-back: #61c4d9;
   letter-spacing: normal;
   text-align: center;
   color: #666666;
+  @include phones {
+    text-align: left;
+    margin-bottom: rem(20px);
+    margin-top: 0;
+  }
 }
 
 .reasons__item:nth-child(2)::before {

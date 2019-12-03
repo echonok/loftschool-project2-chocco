@@ -2,6 +2,12 @@
   //background: lightcoral;
 }
 
+.team__container {
+  @include phones {
+    padding: 0 20%;
+  }
+}
+
 .team__title {
   padding-top: rem(10px);
 }
@@ -13,6 +19,9 @@
   //margin: 0 10px 0 -10px;
   margin: 0 auto;
   padding: rem(40px) 0 0;
+  @include phones {
+    padding: 0;
+  }
 }
 
 .team__item {

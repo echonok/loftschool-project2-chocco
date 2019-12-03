@@ -27,11 +27,16 @@
     flex-direction: column-reverse;
     align-items: center;
     padding: rem(50px) rem(100px);
+  }
+  @include phones {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: rem(10px) 30%;
 	}
 }
 
 .promo__content {
-  flex: 1 1;
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   //padding: 5rem 0;
@@ -39,7 +44,7 @@
   //justify-content: center;
   justify-content: space-evenly;
   @include phones {
-    height: rem(230px);
+    //height: rem(230px);
   }
 }
 
@@ -62,6 +67,13 @@
   margin-bottom: rem(10px);
   @include tablets {
     text-align: center;
+    padding-top: 0;
+    margin-bottom: rem(5px);
+  }
+  @include phones {
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: rem(5px);
   }
 }
 
@@ -82,16 +94,19 @@
 }
 
 .promo__pic-area {
-  flex: 1 1;
+  flex: 1 1 auto;
   //height: 100%;
   //max-width: 60%;
   //padding-top: rem(115px);
   @include tablets {
     text-align: center;
     padding: rem(30px) 20% 0;
+    height: 300%;
   }
   @include phones {
+    //flex: 0.5 0.5 auto;
     padding: 0 3%;
+    height: 30%;
   }
 }
 
