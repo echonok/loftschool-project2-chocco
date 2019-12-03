@@ -76,7 +76,7 @@ label {
   background: #fff;
   border-style: none;
   padding: rem(15px) rem(11px);
-  margin: rem(8px) 0 rem(10px);
+  margin: rem(5px) 0 rem(5px);
   outline: none;
 
   font-size: rem(18px);
@@ -88,6 +88,10 @@ label {
   text-align: left;
   color: #000000;
   border-radius: rem(5px);
+  @include phones {
+    padding: rem(10px) rem(10px);
+    margin: rem(2px) 0 rem(2px);
+  }
 
  }
 

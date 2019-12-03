@@ -1634,7 +1634,7 @@ label {
   background: #fff;
   border-style: none;
   padding: 0.9375rem 0.6875rem;
-  margin: 0.5rem 0 0.625rem;
+  margin: 0.3125rem 0 0.3125rem;
   outline: none;
   font-size: 1.125rem;
   font-weight: normal;
@@ -1645,6 +1645,10 @@ label {
   text-align: left;
   color: #000000;
   border-radius: 0.3125rem; }
+  @media screen and (max-width: 480px) {
+    .form__input {
+      padding: 0.625rem 0.625rem;
+      margin: 0.125rem 0 0.125rem; } }
 
 .form__input:focus {
   -webkit-box-shadow: 0 0 0 0.1875rem #dde3bd;
