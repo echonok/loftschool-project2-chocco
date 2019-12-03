@@ -27,7 +27,7 @@
   flex-direction: row;
   //background: black;
   height: 100%;
-  margin: 0 0;
+  margin: 0 auto;
   padding: 0;
   justify-content: space-between;
   @include phones {
@@ -44,116 +44,85 @@
 }
 
 .vertical-accord {
-  //width: 830px;
-  height: 100%;
-}
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+  &:before,
+	&:after {
+		content: "";
+		display: table;
+	}
 
-.vertical-accord__list {
-  display: flex;
-  //height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+	&:after {
+		clear: both;
+	}
 }
 
 .vertical-accord__item {
-  display: flex;
-  height: 100%;
-  flex: 1 1;
+	float: left;
+	height: 100%;
+
+	&.active {
+		.vertical-accord__trigger-text {
+			color: white;
+		}
+	}
 }
 
-.item-1 { 
-  background-image: url('../../img/back/bars-milk-1100.png');
-}
-
-.item-2 { 
-  background-image: url('../../img/back/bars-fruits-1100.png');
-}
-
-.item-3 { 
-  background-image: url('../../img/back/bars-berries-1100.png');
-}
-
-.vertical-accord__trigger { 
-  background-repeat: no-repeat;
+.vertical-accord__trigger {
+	width: rem(80px);
+	display: block;
+	height: 100%;
+	float: left;
+	text-decoration: none;
+  position: relative;
   background-size: cover;
-  //-webkit-filter: brightness(70%);
-  //filter: brightness(70%);
-  text-decoration: none;
-  height: 100%;
-  width: rem(100px);
-  display: flex;
-  justify-content: center;
-  padding-bottom: rem(40px);
-  padding-bottom: 40%;
-
-  &:before {
-    display: block;
-    content: "";
-    background-image: url('../../img/back/bars-back.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: brightness(70%);
-    height: 100%;
-    z-index: -10;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  //filter: brightness(60%);
+  @include phones {
+    width: rem(70px);
   }
-
 }
 
-.vertical-accord__title {
-  display: inline-block;
+.vertical-accord__trigger-text {
   font-size: rem(40px);
   font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: white;
-  //transform: rotate(-90deg);
-  writing-mode: tb;
-  transform: rotate(180deg);
-  //margin-left: rem(40px);
-}
+	color: #fff;
+	//@include gagalin;
+	text-align: center;
+	white-space: nowrap;
+  position: absolute;
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: 0 0;
+  left: 50%;
+  top: 100%;
+  margin-top: rem(-20px);
 
-.vertical-accord__wrap-content {
-  opacity: 1;
-  width: 0;
-  -webkit-transition: width 0.5s;
-  transition: width 0.5s;
-  background-image: url('../../img/back/bars-back.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0 0;
-}
-
-/*
-.vertical-accord__trigger:hover,
-.vertical-accord__wrap-content:hover,
-.vertical-accord__content:hover { 
-  //-webkit-filter: brightness(30%);
-  //filter: brightness(30%);
-  + .vertical-accord__wrap-content {
-    width: 43rem;
+  @include phones {
+    font-size: rem(26px);
   }
 }
-*/
 
-.vertical-accord__content {  
-  font-size: rem(16px);
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-  display: block;
+.vertical-accord__content {
+	height: 100%;
+	float: left;
+	background: rgba(#2f3234, 0.93);
+	width: 0;
+	overflow: hidden;
+}
+
+.vertical-accord__text {
+	//@include ubuntu(light);
+	font-size: rem(14px);
+	color: #fff;
+	padding: rem(60px) rem(30px);
+	width: 100%;
+  line-height: 1.8;
+  display: none;
+
+  @include phones {
+    padding: rem(25px) rem(15px);
+  }
 }
