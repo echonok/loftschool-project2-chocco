@@ -11,19 +11,21 @@
 }
 
 .member__pic-area {
-  display: inline-block;
-  position: relative;
+  display: block;
+  //position: relative;
   width: ren(220px);
   height: rem(288px);
   @include tablets {
     //width: rem(240px);
-    //height: rem(280px);
+    max-height: rem(280px);
     width: 80%;
-    //height: 100%;
+    //max-height: 30%;
   }
   @include phones {
-    width: rem(140px);
-    height: rem(180px);
+    //width: rem(140px);
+    max-height: rem(250px);
+    width: 80%;
+    //max-height: 30%;
   }
 }
 

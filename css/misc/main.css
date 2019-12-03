@@ -1295,7 +1295,7 @@ table {
 */
 @media screen and (max-width: 480px) {
   .team__container {
-    padding: 0 20%; } }
+    padding: 0 8%; } }
 
 .team__title {
   padding-top: 0.625rem; }
@@ -1343,17 +1343,17 @@ table {
   align-items: center; }
 
 .member__pic-area {
-  display: inline-block;
-  position: relative;
+  display: block;
   width: ren(220px);
   height: 18rem; }
   @media screen and (max-width: 768px) {
     .member__pic-area {
+      max-height: 17.5rem;
       width: 80%; } }
   @media screen and (max-width: 480px) {
     .member__pic-area {
-      width: 8.75rem;
-      height: 11.25rem; } }
+      max-height: 15.625rem;
+      width: 80%; } }
 
 .member__pic {
   -o-object-fit: cover;
