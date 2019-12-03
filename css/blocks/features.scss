@@ -8,7 +8,7 @@
   color: $text-main-color;
   display: flex;
   flex: 1 1;
-  margin-right: rem(25px);
+  margin-right: 2%;
   &:last-child {
     margin-right: 0;
   }
@@ -17,6 +17,11 @@
 .feature__pic-area {
   width: rem(90px);
   height: rem(70px);
+  flex: 1 0 auto;
+  @include phones {
+    width: 30%;
+    height: 30%;
+    }
 }
 
 .feature__pic {
@@ -29,7 +34,7 @@
 }
 
 .feature__desc {
-  padding-left: rem(10px);  
+  padding-left: 5%;  
   font-size: 16px;
   font-weight: normal;
   font-stretch: normal;

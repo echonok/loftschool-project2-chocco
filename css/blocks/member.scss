@@ -15,6 +15,12 @@
   position: relative;
   width: ren(220px);
   height: rem(288px);
+  @include tablets {
+    //width: rem(240px);
+    //height: rem(280px);
+    width: 80%;
+    //height: 100%;
+  }
   @include phones {
     width: rem(140px);
     height: rem(180px);
@@ -22,7 +28,7 @@
 }
 
 .member__pic {
-  display: block;
+  //display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
