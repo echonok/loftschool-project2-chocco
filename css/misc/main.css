@@ -1912,7 +1912,8 @@ label {
   -ms-flex-align: center;
   align-items: center;
   padding: 0.625rem;
-  margin-bottom: 2.1875rem; }
+  margin-bottom: 2.1875rem;
+  position: relative; }
 
 .bar__icon-pic {
   fill: white;
@@ -2020,11 +2021,13 @@ label {
   margin: 1.875rem; }
 
 .bar__ingredients {
-  display: block;
+  display: none;
   position: absolute;
+  left: 5.625rem;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 5px;
-  border: solid 1px #efefef; }
+  border: solid 1px #efefef;
+  z-index: 20; }
 
 .bar__ingredients-list {
   display: -webkit-box;
@@ -2034,7 +2037,7 @@ label {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 1.5625rem 1.875rem 1.5625rem 1.5625rem; }
+  padding: 1.5625rem; }
 
 .bar__ingredients-item {
   display: -webkit-box;
@@ -2053,7 +2056,10 @@ label {
 .ingredients__pic {
   width: 2.1875rem;
   height: 2.1875rem;
-  margin-right: 1.5625rem; }
+  margin-right: 1.5625rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
 
 .ingredients__pic-icon {
   width: 100%;
@@ -2071,11 +2077,17 @@ label {
 .ingredients__name {
   font-weight: 500;
   margin-right: 2.1875rem;
-  text-align: left; }
+  text-align: left;
+  -webkit-box-flex: 5;
+  -ms-flex: 5 1 auto;
+  flex: 5 1 auto; }
 
 .ingredients__weight {
   font-weight: normal;
-  text-align: right; }
+  text-align: right;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto; }
 
 .work {
   background: coral; }

@@ -38,6 +38,7 @@
   align-items: center;
   padding: rem(10px);
   margin-bottom: rem(35px);
+  position: relative;
 }
 
 .bar__icon-pic {
@@ -143,18 +144,19 @@
 }
 
 .bar__ingredients {
-  display: block;
+  display: none;
   position: absolute;
-  //right: rem(10px);
+  left: rem(90px);
   background: rgba($color: #fff, $alpha: 0.9);
   border-radius: 5px;
   border: solid 1px #efefef;
+  z-index: 20;
 }
 
 .bar__ingredients-list {
   display: flex;
   flex-direction: column;
-  padding: rem(25px) rem(30px) rem(25px) rem(25px);
+  padding: rem(25px);
 }
 
 .bar__ingredients-item {
@@ -171,6 +173,7 @@
   width: rem(35px);
   height: rem(35px);
   margin-right: rem(25px);
+  flex: 1 1 auto;
 }
 
 .ingredients__pic-icon {
@@ -192,9 +195,11 @@
   font-weight: 500;
   margin-right: rem(35px);
   text-align: left;
+  flex: 5 1 auto;
 }
 
 .ingredients__weight {
   font-weight: normal;
   text-align: right;
+  flex: 1 1 auto;
 }
