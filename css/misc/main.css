@@ -405,7 +405,6 @@ table {
   vertical-align: middle;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  position: relative;
   max-width: 68.75rem; }
   @media screen and (max-width: 768px) {
     .container {
@@ -1944,6 +1943,10 @@ label {
 
 .ingredients {
   background: #f8faf9; }
+  @media screen and (max-width: 768px) {
+    .ingredients {
+      position: relative;
+      padding: 0 10%; } }
 
 .ingredients__container {
   display: -webkit-box;
@@ -1955,13 +1958,45 @@ label {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
-  flex-direction: row; }
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 480px) {
+    .ingredients__container {
+      position: relative;
+      padding: 0 10%;
+      height: 100%; } }
 
 .ingredients__arrow {
   width: 0.9375rem;
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
+  @media screen and (max-width: 768px) {
+    .ingredients__arrow {
+      position: absolute;
+      top: 27%; } }
+  @media screen and (max-width: 480px) {
+    .ingredients__arrow {
+      position: absolute;
+      top: 20%; } }
+
+@media screen and (max-width: 768px) {
+  .ingredients__arrow--left {
+    left: 20%; } }
+
+@media screen and (max-width: 480px) {
+  .ingredients__arrow--left {
+    left: 10%; } }
+
+@media screen and (max-width: 768px) {
+  .ingredients__arrow--right {
+    right: 20%; } }
+
+@media screen and (max-width: 480px) {
+  .ingredients__arrow--right {
+    right: 10%; } }
 
 .ingredients__arrow-pic {
   fill: transparent;
@@ -2044,13 +2079,17 @@ label {
   -ms-flex-align: center;
   align-items: center;
   padding: 0.625rem;
-  margin-bottom: 2.1875rem;
-  position: relative; }
+  margin-bottom: 2.1875rem; }
   @media screen and (max-width: 768px) {
     .bar__icon {
       position: absolute;
-      right: 3.125rem;
-      top: 3.125rem; } }
+      right: 1.5625rem;
+      top: 1.5625rem; } }
+  @media screen and (max-width: 480px) {
+    .bar__icon {
+      position: absolute;
+      right: 1.5625rem;
+      top: 1.5625rem; } }
 
 .bar__icon-pic {
   fill: white;
@@ -2184,6 +2223,9 @@ label {
   border-radius: 5px;
   border: solid 1px #efefef;
   z-index: 20; }
+  @media screen and (max-width: 768px) {
+    .bar__ingredients {
+      left: 0; } }
 
 .bar__ingredients-list {
   display: -webkit-box;

@@ -1,18 +1,55 @@
 .ingredients {
   background: #f8faf9;
+  @include tablets {
+    position: relative;
+    padding: 0 10%;
+  }
 }
 
 .ingredients__container {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  align-items: center;
+  @include phones {
+    position: relative;
+    padding: 0 10%;
+    height: 100%;
+  }
 }
 
 .ingredients__arrow {
   width: rem(15px);
   //height: rem(100px);
   flex: 1 0 auto;
+  @include tablets {
+    position: absolute;
+    top: 27%;
+  }
+  @include phones {
+    position: absolute;
+    top: 20%;
+  }
 }
+
+.ingredients__arrow--left {
+  @include tablets {
+    left: 20%;
+  }
+  @include phones {
+    left: 10%;
+  }
+}
+
+.ingredients__arrow--right {
+  @include tablets {
+    right: 20%;
+  }
+  @include phones {
+    right: 10%;
+  }
+}
+
 
 .ingredients__arrow-pic {
   fill: transparent;
@@ -79,11 +116,15 @@
   align-items: center;
   padding: rem(10px);
   margin-bottom: rem(35px);
-  position: relative;
   @include tablets {
     position: absolute;
-    right: rem(50px);
-    top: rem(50px);
+    right: rem(25px);
+    top: rem(25px);
+  }  
+  @include phones {
+    position: absolute;
+    right: rem(25px);
+    top: rem(25px);
   }
 }
 
@@ -216,6 +257,9 @@
   border-radius: 5px;
   border: solid 1px #efefef;
   z-index: 20;
+  @include tablets {
+    left: 0;
+  }
 }
 
 .bar__ingredients-list {
