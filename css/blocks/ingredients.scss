@@ -4,7 +4,29 @@
 
 .ingredients__container {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.ingredients__arrow {
+  width: rem(15px);
+  //height: rem(100px);
+  flex: 1 0 auto;
+}
+
+.ingredients__arrow-pic {
+  fill: transparent;
+  stroke: black;
+  stroke-width: rem(2px);
+  width: 100%;
+  height: 100%;
+}
+
+.bars {
+  margin: 0 rem(50px);
+  @include phones {
+    margin: 0 rem(10px);
+  }
 }
 
 .bars__list {
@@ -13,11 +35,30 @@
 
 .bars__item {
   display: flex;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .bar__pic-area {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   margin-right: rem(80px);
+  @include tablets {
+    width: 50vw;
+    flex: 1 1 auto;
+    margin-right: 0;
+  }
+  @include phones {
+    width: 50vw;
+    flex: 1 1 auto;
+    margin-right: 0;
+  }
+}
+
+.bar__pic {
+  width: 100%;
+  //height: 100%;
 }
 
 .bar__description {
@@ -39,6 +80,11 @@
   padding: rem(10px);
   margin-bottom: rem(35px);
   position: relative;
+  @include tablets {
+    position: absolute;
+    right: rem(50px);
+    top: rem(50px);
+  }
 }
 
 .bar__icon-pic {
@@ -56,6 +102,9 @@
   line-height: normal;
   letter-spacing: normal;
   text-transform: uppercase;
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .bar__name {
@@ -68,11 +117,17 @@
   text-align: left;
   color: #0d0d0d;
   margin-bottom: rem(20px);
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .bar__info {
   display: flex;
   flex-direction: column;
+  @include tablets {
+
+  }
 }
 
 .bar__desc {
@@ -85,10 +140,16 @@
   text-align: left;
   color: #666666;
   margin-bottom: rem(45px);
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .bar__stats-list {
   display: flex;
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .bar__stats-item {
@@ -98,6 +159,7 @@
   &:last-child {
     margin-right: 0;
   }
+
 }
 
 .stat__name,
@@ -123,6 +185,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  @include tablets {
+    justify-content: center;
+  }
 }
 
 .bar__price {

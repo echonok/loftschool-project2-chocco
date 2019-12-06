@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<symbol id="arrow-right" viewBox="0 0 16.34 29">
+		<path id="arrow-scroll" d="M1041.01,1611.99l11.76,10.64a3.968,3.968,0,0,1,0,5.73l-11.76,10.63" transform="translate(-1038.66 -1611)"/>
+	</symbol>
+	<symbol id="arrow-left" viewBox="0 0 16.344 29">
+ 		<path id="arrow-scroll" d="M59.994,1639l-11.766-10.63a3.978,3.978,0,0,1,0-5.73l11.767-10.63" transform="translate(-46 -1611)"/>
+	</symbol>
+</svg>
