@@ -1,0 +1,40 @@
+.mobile-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 300;
+  background-color: black;
+  opacity: 0.702;
+}
+
+.mobile-menu__container {
+  .mobile__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .mobile__item {
+    padding-right: 10px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  
+  .mobile__link {
+    text-decoration: none;
+    color: $text-main-color;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+  }
+}
