@@ -6,9 +6,10 @@ menuButton.addEventListener('click', (elem) => {
   menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
 });
 
-const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenu = document.querySelector('#mobile-menu');
 const hamburger = document.querySelector('#hamburger-animated');
 hamburger.addEventListener('click', (elem) => {
   elem.preventDefault();
   hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
 });

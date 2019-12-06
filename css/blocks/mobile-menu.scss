@@ -1,4 +1,4 @@
-.mobile-menu {
+#mobile-menu {
   display: none;
   position: absolute;
   left: 0;
@@ -12,25 +12,32 @@
   opacity: 0.702;
 }
 
+#mobile-menu.open {
+  display: block;
+  //margin: auto;
+}
+
 .mobile-menu__container {
+  margin: auto auto;
   .mobile__list {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    padding-top: rem(50px);
   }
   
   .mobile__item {
-    padding-right: 10px;
+    padding-bottom: 10px;
     &:last-child {
-      padding-right: 0;
+      padding-bottom: 0;
     }
   }
   
   .mobile__link {
     text-decoration: none;
     color: $text-main-color;
-    font-size: 18px;
+    font-size: rem(36px);
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
