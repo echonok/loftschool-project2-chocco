@@ -11,28 +11,42 @@
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
+  @include tablets {
+    position: relative;
+    padding: 0 5%;
+    height: 100%;
+  }
   @include phones {
     position: relative;
-    padding: 0 10%;
+    padding: 0 5%;
     height: 100%;
   }
 }
 
 .ingredients__arrow {
-  width: rem(15px);
-  //height: rem(100px);
+  //z-index: 1000;
+  width: rem(35px);
+  height: rem(35px);
   flex: 1 0 auto;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  //height: rem(100px);
+  
   @include tablets {
-    position: absolute;
-    top: 27%;
+    position: static;
+    //top: 27%;
   }
   @include phones {
-    position: absolute;
-    top: 20%;
+    position: static;
+    //top: 20%;
   }
+  
 }
 
+
 .ingredients__arrow--left {
+  left: rem(-50px);
   @include tablets {
     left: 20%;
   }
@@ -42,6 +56,7 @@
 }
 
 .ingredients__arrow--right {
+  right: rem(-50px);
   @include tablets {
     right: 20%;
   }
@@ -72,24 +87,40 @@
 
 .bars__item {
   display: flex;
+  position: relative;
   @include tablets {
+    position: static;
     flex-direction: column;
     align-items: center;
   }
 }
 
-.bar__pic-area {
+.bar__pic-group {
+  display: flex;
   flex: 1 0 auto;
   margin-right: rem(80px);
+  justify-content: space-between;
+  align-items: center;
+  @include tablets {
+    margin-right: 0;
+  }
+  @include phones {
+    margin-right: 0;
+  }
+}
+
+.bar__pic-area {
   @include tablets {
     width: 50vw;
     flex: 1 1 auto;
     margin-right: 0;
+    margin: 0 rem(10px);
   }
   @include phones {
     width: 50vw;
     flex: 1 1 auto;
     margin-right: 0;
+    margin: 0 rem(10px);
   }
 }
 

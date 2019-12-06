@@ -53,6 +53,11 @@
 .promo__best-offer {
   //display: flex;
   //flex-direction: column;
+  @include tablets {
+    //height: rem(230px);
+    //height: 50%;
+    text-align: center;
+  }
   @include phones {
     //height: rem(230px);
     height: 50%;
