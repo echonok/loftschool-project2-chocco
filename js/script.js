@@ -17,12 +17,11 @@ hamburger.addEventListener('click', (elem) => {
 const accordItems = document.querySelectorAll('.vertical-accord__item');
 
 accordItems.forEach(item => {
+
   const accordTrigger = item.querySelector('.vertical-accord__trigger');
   accordTrigger.addEventListener('click', elem => {
-    
-    accordItems.forEach(item => item.classList.remove('vertical-accord__item--active'));
-
     elem.preventDefault();
+    accordItems.forEach(item => item.classList.remove('vertical-accord__item--active'));
     item.classList.toggle('vertical-accord__item--active');
   });
 
@@ -30,4 +29,21 @@ accordItems.forEach(item => {
   closeCross.addEventListener('click', elem => {
     accordItems.forEach(item => item.classList.remove('vertical-accord__item--active'));
   })
+
 });
+
+const arrowLeft = document.querySelector('.ingredients__arrow--left');
+const arrowRight = document.querySelector('.ingredients__arrow--right');
+const barList = document.querySelector('.bars__list');
+
+arrowRight.addEventListener("click", (elem) => loop('right', elem));
+arrowLeft.addEventListener("click", (elem) => loop('left', elem));
+
+const loop = (direction, elem) => {
+  elem.preventDefault();
+  if (direction === 'right') {
+    barList.appendChild(barList.firstElementChild);
+  } else {
+    barList.insertBefore(barList.lastElementChild, barList.firstElementChild);
+  }
+};

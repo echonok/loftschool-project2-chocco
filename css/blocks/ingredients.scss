@@ -14,6 +14,7 @@
   @include tablets {
     position: relative;
     padding: 0 5%;
+    padding: 0 0;
     height: 100%;
   }
   @include phones {
@@ -28,17 +29,17 @@
   width: rem(35px);
   height: rem(35px);
   flex: 1 0 auto;
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
+  //position: absolute;
+  //top: 50%;
+  //bottom: 50%;
   //height: rem(100px);
   
   @include tablets {
-    position: static;
+    //position: static;
     //top: 27%;
   }
   @include phones {
-    position: static;
+    //position: static;
     //top: 20%;
   }
   
@@ -46,7 +47,7 @@
 
 
 .ingredients__arrow--left {
-  left: rem(-50px);
+  //left: rem(-50px);
   @include tablets {
     left: 20%;
   }
@@ -56,7 +57,7 @@
 }
 
 .ingredients__arrow--right {
-  right: rem(-50px);
+  //right: rem(-50px);
   @include tablets {
     right: 20%;
   }
@@ -74,7 +75,24 @@
   height: 100%;
 }
 
+.slider {
+  flex: 1 0 auto;
+  display: flex;
+  width: rem(800px);
+  //width: 100%;
+  overflow: hidden;
+  @include tablets {
+    width: rem(450px);
+  }
+  @include phones {
+    width: rem(350px);
+  }
+}
+
 .bars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 rem(50px);
   @include phones {
     margin: 0 rem(10px);
@@ -82,17 +100,31 @@
 }
 
 .bars__list {
-  
+  display: flex;
+  position: relative;
+  flex: 1 1 auto;
 }
 
 .bars__item {
+  width: rem(800px);
   display: flex;
+  //flex: 1 1 auto;
   position: relative;
+  //width: rem(500px);
   @include tablets {
     position: static;
     flex-direction: column;
     align-items: center;
+    //width: 100%;
+    width: rem(450px);
   }
+  @include phones {
+    width: rem(350px);
+  }
+}
+
+.bars__item--hidden {
+  display: none;
 }
 
 .bar__pic-group {
