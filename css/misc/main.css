@@ -1459,7 +1459,8 @@ table {
   padding: 0;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative; }
   @media screen and (max-width: 480px) {
     .menu__container {
       padding: 15% 2% 2% 5%; } }

@@ -30,7 +30,7 @@
   margin: 0 auto;
   padding: 0;
   justify-content: space-between;
-
+  position: relative;
   @include phones {
     padding: 15% 2% 2% 5%;
   }
