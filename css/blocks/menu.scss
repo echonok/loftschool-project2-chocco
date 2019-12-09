@@ -30,9 +30,11 @@
   margin: 0 auto;
   padding: 0;
   justify-content: space-between;
+
   @include phones {
     padding: 15% 2% 2% 5%;
   }
+
   @include tablets {
     padding: 10% 2% 5% 5%;
   }
@@ -44,42 +46,55 @@
 }
 
 .vertical-accord {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
-  &:before,
-	&:after {
-		content: "";
-		display: table;
-	}
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
 
-	&:after {
-		clear: both;
-	}
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
 }
 
 .vertical-accord__item {
-	float: left;
-	height: 100%;
+  float: left;
+  height: 100%;
 
-	&.active {
-		.vertical-accord__trigger-text {
-			color: white;
-		}
-	}
+  &--active {
+
+    .vertical-accord__content {
+      width: 100%;
+    }
+
+    .vertical-accord__trigger-text {}
+
+    .vertical-accord__text {
+      display: block;
+    }
+    #close-cross {
+      display: block;
+    }
+  }
+
 }
 
 .vertical-accord__trigger {
-	width: rem(100px);
-	display: block;
-	height: 100%;
-	float: left;
-	text-decoration: none;
+  width: rem(100px);
+  display: block;
+  height: 100%;
+  float: left;
+  text-decoration: none;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
   //filter: brightness(60%);
   @include phones {
     width: rem(80px);
@@ -89,10 +104,10 @@
 .vertical-accord__trigger-text {
   font-size: rem(40px);
   font-weight: 500;
-	color: #fff;
-	//@include gagalin;
-	text-align: center;
-	white-space: nowrap;
+  color: #fff;
+  //@include gagalin;
+  text-align: center;
+  white-space: nowrap;
   position: absolute;
   transform: rotate(-90deg) translateY(-50%);
   transform-origin: 0 0;
@@ -106,23 +121,76 @@
 }
 
 .vertical-accord__content {
-	height: 100%;
-	float: left;
-	background: rgba(#2f3234, 0.93);
-	width: 0;
-	overflow: hidden;
+  height: 100%;
+  float: left;
+  background: rgba(#2f3234, 0.93);
+  overflow: hidden;
+  max-width: rem(430px);
+  transition: all 1s;
+  position: relative;
+  @include tablets {
+    max-width: rem(230px);
+  }
 }
 
 .vertical-accord__text {
-	//@include ubuntu(light);
-	font-size: rem(14px);
-	color: #fff;
-	padding: rem(60px) rem(30px);
-	width: 100%;
-  line-height: 1.8;
+  font-size: rem(16px);
+  color: #fff;
+  padding: rem(50px) rem(25px);
+  max-width: 100%;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
   display: none;
-
-  @include phones {
-    padding: rem(25px) rem(15px);
+  @include tablets {
+    padding: rem(65px) rem(15px);
   }
+}
+
+#close-cross {
+  width: rem(24px);
+  height: rem(45px);
+  display: none;
+  position: absolute;
+  //margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 500;
+  display: none;
+  right: rem(25px);
+  top: rem(25px);
+}
+
+#close-cross span {
+  display: block;
+  position: absolute;
+  height: rem(5px);
+  width: 100%;
+  background: #fff;
+  border-radius: rem(3px);
+  opacity: 1;
+  left: 0;
+}
+
+#close-cross span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#close-cross span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }

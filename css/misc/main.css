@@ -1484,8 +1484,12 @@ table {
 .vertical-accord__item {
   float: left;
   height: 100%; }
-  .vertical-accord__item.active .vertical-accord__trigger-text {
-    color: white; }
+  .vertical-accord__item--active .vertical-accord__content {
+    width: 100%; }
+  .vertical-accord__item--active .vertical-accord__text {
+    display: block; }
+  .vertical-accord__item--active #close-cross {
+    display: block; }
 
 .vertical-accord__trigger {
   width: 6.25rem;
@@ -1525,19 +1529,74 @@ table {
   height: 100%;
   float: left;
   background: rgba(47, 50, 52, 0.93);
-  width: 0;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 26.875rem;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    .vertical-accord__content {
+      max-width: 14.375rem; } }
 
 .vertical-accord__text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #fff;
-  padding: 3.75rem 1.875rem;
-  width: 100%;
-  line-height: 1.8;
+  padding: 3.125rem 1.5625rem;
+  max-width: 100%;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
   display: none; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     .vertical-accord__text {
-      padding: 1.5625rem 0.9375rem; } }
+      padding: 4.0625rem 0.9375rem; } }
+
+#close-cross {
+  width: 1.5rem;
+  height: 2.8125rem;
+  display: none;
+  position: absolute;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  z-index: 500;
+  display: none;
+  right: 1.5625rem;
+  top: 1.5625rem; }
+
+#close-cross span {
+  display: block;
+  position: absolute;
+  height: 0.3125rem;
+  width: 100%;
+  background: #fff;
+  border-radius: 0.1875rem;
+  opacity: 1;
+  left: 0; }
+
+#close-cross span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+#close-cross span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
 
 .map {
   background-image: url("../../img/map/map.png");
