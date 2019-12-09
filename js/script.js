@@ -26,7 +26,7 @@ accordItems.forEach(item => {
     item.classList.toggle('vertical-accord__item--active');
   });
 
-  const closeCross = item.querySelector('#close-cross');
+  const closeCross = item.querySelector('.close-cross');
   closeCross.addEventListener('click', elem => {
     accordItems.forEach(item => item.classList.remove('vertical-accord__item--active'));
   })

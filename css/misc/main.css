@@ -1483,12 +1483,15 @@ table {
 
 .vertical-accord__item {
   float: left;
-  height: 100%; }
+  height: 100%;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
   .vertical-accord__item--active .vertical-accord__content {
     width: 100%; }
   .vertical-accord__item--active .vertical-accord__text {
     display: block; }
-  .vertical-accord__item--active #close-cross {
+  .vertical-accord__item--active .close-cross {
     display: block; }
 
 .vertical-accord__trigger {
@@ -1549,12 +1552,15 @@ table {
   font-style: normal;
   line-height: 1.5;
   letter-spacing: normal;
-  display: none; }
+  display: none;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
   @media screen and (max-width: 768px) {
     .vertical-accord__text {
       padding: 4.0625rem 0.9375rem; } }
 
-#close-cross {
+.close-cross {
   width: 1.5rem;
   height: 2.8125rem;
   display: none;
@@ -1574,7 +1580,7 @@ table {
   right: 1.5625rem;
   top: 1.5625rem; }
 
-#close-cross span {
+.close-cross span {
   display: block;
   position: absolute;
   height: 0.3125rem;
@@ -1584,14 +1590,14 @@ table {
   opacity: 1;
   left: 0; }
 
-#close-cross span:nth-child(1) {
+.close-cross span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-#close-cross span:nth-child(2) {
+.close-cross span:nth-child(2) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
