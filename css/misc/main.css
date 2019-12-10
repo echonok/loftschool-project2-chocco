@@ -1852,6 +1852,9 @@ label {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.order__container {
+  position: relative; }
+
 .hamburger-menu {
   position: fixed;
   top: 0;
@@ -2333,7 +2336,7 @@ label {
       justify-content: center; } }
 
 .bar__price {
-  font-size: 60px;
+  font-size: 3.75rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
@@ -2558,3 +2561,58 @@ label {
     font-style: normal;
     line-height: 1.67;
     letter-spacing: normal; }
+
+.mail-response {
+  background: black;
+  width: 18.75rem;
+  height: 18.75rem;
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 500;
+  color: white; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .modal-content p {
+    font-size: 1.875rem;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0d0d0d; }
