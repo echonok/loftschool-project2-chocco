@@ -135,3 +135,41 @@ const validateField = (field) => {
   field.nextElementSibling.textContent = field.validationMessage;
   return field.checkValidity();
 };
+
+$(document).ready(() => {
+  $('.fixed-menu__item').each((ndx, item) => {
+    $(item).on('click', e => {
+      
+      e.preventDefault();
+      console.log(ndx);
+      console.log(item);
+      let scrollSize = ndx * 1000;
+      $('html, body').animate({
+        'scrollTop' : '0'
+      }, 1000);
+    });
+  })
+})
+
+
+const debounce = (func, time) => {
+  let timeout;
+  return function(){
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      func.apply(context, args);
+    }, time)
+  };
+};
+
+let hello = debounce((one, two) => {
+  console.log('hello');
+  console.log(one, two);
+}, 1000);
+
+$(window).scroll(() => {
+  //debugger;
+  hello(1, 2);
+});
