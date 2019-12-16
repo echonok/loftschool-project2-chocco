@@ -81,6 +81,7 @@
   width: rem(800px);
   //width: 100%;
   overflow: hidden;
+  //transition: 1s all ease-in;
   @include tablets {
     width: rem(450px);
   }
@@ -103,6 +104,7 @@
   display: flex;
   position: relative;
   flex: 1 1 auto;
+  //transition: 1s all ease-in;
 }
 
 .bars__item {

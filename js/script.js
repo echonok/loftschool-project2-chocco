@@ -50,6 +50,7 @@ const orderForm = document.querySelector('#order-form');
 const orderButton = document.querySelector('#order-button');
 const closeButton = document.querySelector('#close-button');
 const modalWindow = document.querySelector('.modal');
+const modalresult = document.querySelector('.result');
 
 orderButton.addEventListener('click', (elem) => {
   elem.preventDefault();
@@ -76,11 +77,12 @@ const sendDataFetch = async (formData) => {
       body: formData
     });
     const result = await response.json();
-    console.log('Успех:', JSON.stringify(result));
+    debugger;
     modalWindow.style.display = 'block';
-    //modalWindow.style.textContent = result.message;    
+    modalresult.textContent = "Заказ успешно отправлен. Благодарим за заказ!";
   } catch (error) {
-    console.error('Ошибка:', error);
+    modalWindow.style.display = 'block';
+    modalresult.textContent = "Не удалось отправить заказ. Пожалуйста попробуйте позже или воспользуйтесь заказом по телефону";
   }
 };
 
@@ -89,17 +91,20 @@ const sendDataXML = (formData) => {
   xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
   xhr.send(formData);
   xhr.addEventListener('load', () => {
-    //debugger;
     console.log(xhr.response);
     console.log(JSON.parse(xhr.response).message);
     modalWindow.style.display = 'block';
-    //JSON.parse(xhr.response)
   })
 };
 
 closeButton.addEventListener('click', () => {
   modalWindow.style.display = "none";
+});
+
+closeButton.addEventListener('click', () => {
+  modalErrorWindow.style.display = "none";
 })
+
 
 window.addEventListener('click', (elem) => {
   if (event.target === modalWindow) {

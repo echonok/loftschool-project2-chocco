@@ -2610,6 +2610,7 @@ label {
   .modal-content p {
     font-size: 1.875rem;
     font-weight: 300;
+    text-align: center;
     font-stretch: normal;
     font-style: normal;
     line-height: 1;
