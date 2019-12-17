@@ -168,7 +168,6 @@ $(document).ready(() => {
   })
 })
 
-
 const debounce = (func, time) => {
   let timeout;
   return function () {
@@ -236,3 +235,34 @@ const createCarrousel = () => {
 };
 
 createCarrousel();
+
+
+const wheelIt = () => {
+  const sections = document.querySelectorAll('.section');
+  console.log(sections.length);
+  window.addEventListener('wheel', (event) => {
+    const movePage = event.deltaY < 0 ? -1000 : 1000;
+    //const movePage = event.deltaY < 0 ? up : down;
+    window.scroll({
+      top: movePage,
+      behavior: "smooth"
+    });
+  });
+};
+
+const resizeScrolling = () => {
+  window.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    const scrollStep = window.innerHeight;
+    let currentPageYOffset = window.pageYOffset;
+    const movePage = event.deltaY < 0 ? currentPageYOffset - scrollStep : currentPageYOffset + scrollStep;
+    window.scroll({
+      top: movePage,
+      behavior: "smooth"
+    });
+  });
+};
+
+resizeScrolling();
+window.addEventListener('resize', () => resizeScrolling());
+//wheelIt();

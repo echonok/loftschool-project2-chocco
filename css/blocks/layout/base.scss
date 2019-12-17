@@ -9,6 +9,7 @@ html, body {
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 16px;
   @include laptops {
     font-size: 16px;
