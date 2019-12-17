@@ -153,21 +153,6 @@ const validateField = (field) => {
   return field.checkValidity();
 };
 
-$(document).ready(() => {
-  $('.fixed-menu__item').each((ndx, item) => {
-    $(item).on('click', e => {
-
-      e.preventDefault();
-      console.log(ndx);
-      console.log(item);
-      let scrollSize = ndx * 1000;
-      $('html, body').animate({
-        'scrollTop': '0'
-      }, 1000);
-    });
-  })
-})
-
 const debounce = (func, time) => {
   let timeout;
   return function () {
@@ -198,7 +183,7 @@ memberHead.forEach(member => {
 });
 
 const createCarrousel = () => {
-  
+
   const addReviewPoint = (review, parent) => {
     const li = document.createElement("li");
     li.classList.add('review__carrousel-item');
@@ -220,7 +205,7 @@ const createCarrousel = () => {
     addReviewPoint(review, reviewCarrousel);
   });
   reviewCarrousel.firstElementChild.classList.add('review__carrousel-item--active');
-  
+
   const reviewsAvatars = document.querySelectorAll('.review__carrousel-item');
 
   reviewsAvatars.forEach((avatar, index) => {
@@ -251,18 +236,50 @@ const wheelIt = () => {
 };
 
 const resizeScrolling = () => {
-  window.addEventListener('wheel', (event) => {
+  window.addEventListener('scroll', (event) => {
     event.preventDefault();
+
     const scrollStep = window.innerHeight;
     let currentPageYOffset = window.pageYOffset;
-    const movePage = event.deltaY < 0 ? currentPageYOffset - scrollStep : currentPageYOffset + scrollStep;
-    window.scroll({
-      top: movePage,
-      behavior: "smooth"
-    });
+    console.log(scrollStep);
+    console.log(currentPageYOffset);
+
+    //const movePage = event.deltaY < 0 ? currentPageYOffset - scrollStep : currentPageYOffset + scrollStep;
+    //window.scroll({
+    //  top: movePage,
+    //  behavior: "smooth"
+    //});
   });
 };
+
+window.addEventListener('scroll', event => {
+  //console.log(window.pageYOffset);
+});
 
 resizeScrolling();
 window.addEventListener('resize', () => resizeScrolling());
 //wheelIt();
+
+const scrollItems = document.querySelectorAll('.fixed-menu__item');
+
+scrollItems.forEach((item, index) => {
+  item.addEventListener('click', (event) => {
+
+    scrollItems.forEach(elem => elem.getElementsByClassName('fixed-menu__dot')[0].classList.remove('fixed-menu__dot--active'));
+
+    item.getElementsByClassName('fixed-menu__dot')[0].classList.add('fixed-menu__dot--active');
+
+    event.preventDefault();
+
+    const scrollStep = window.innerHeight;
+    let currentPageYOffset = window.pageYOffset;
+    let scrollSize = index * scrollStep;
+    console.log(index);
+    console.log(item);
+
+    window.scroll({
+      top: scrollSize,
+      behavior: "smooth"
+    });
+  });
+});
