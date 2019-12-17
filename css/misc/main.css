@@ -2115,7 +2115,10 @@ label {
   position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
-  flex: 1 1 auto; }
+  flex: 1 1 auto;
+  -webkit-transition: 0.5s all ease-in;
+  -o-transition: 0.5s all ease-in;
+  transition: 0.5s all ease-in; }
 
 .bars__item {
   width: 50rem;
@@ -2214,7 +2217,8 @@ label {
   -ms-flex-align: center;
   align-items: center;
   padding: 0.625rem;
-  margin-bottom: 2.1875rem; }
+  margin-bottom: 2.1875rem;
+  cursor: pointer; }
   @media screen and (max-width: 768px) {
     .bar__icon {
       position: absolute;

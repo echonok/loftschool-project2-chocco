@@ -34,17 +34,29 @@ const arrowLeft = document.querySelector('.ingredients__arrow--left');
 const arrowRight = document.querySelector('.ingredients__arrow--right');
 const barList = document.querySelector('.bars__list');
 
-arrowRight.addEventListener("click", (elem) => loop('right', elem));
-arrowLeft.addEventListener("click", (elem) => loop('left', elem));
+let sliderStep = barList.firstElementChild.offsetWidth;
+let sliderPosition = 0;
+let leftEdge = 0;
+let rightEdge = (barList.children.length - 1) * sliderStep;
 
-const loop = (direction, elem) => {
-  elem.preventDefault();
-  if (direction === 'right') {
-    barList.appendChild(barList.firstElementChild);
-  } else {
-    barList.insertBefore(barList.lastElementChild, barList.firstElementChild);
-  }
+const resizeSlider = (event) => {
+  sliderStep = barList.firstElementChild.offsetWidth;
+  rightEdge = (barList.children.length - 1) * sliderStep;
 };
+
+window.addEventListener('resize', (event) => resizeSlider(event));
+
+arrowLeft.addEventListener("click", (elem) => {
+  elem.preventDefault();
+  sliderPosition = sliderPosition === leftEdge ? rightEdge : sliderPosition - sliderStep;
+  barList.style.transform = `translate(-${sliderPosition}px`;
+});
+
+arrowRight.addEventListener("click", (elem) => {
+  elem.preventDefault();
+  sliderPosition = sliderPosition === rightEdge ? leftEdge : sliderPosition + sliderStep;
+  barList.style.transform = `translate(-${sliderPosition}px`;
+});
 
 const orderForm = document.querySelector('#order-form');
 const orderButton = document.querySelector('#order-button');
@@ -171,5 +183,5 @@ let hello = debounce((one, two) => {
 
 $(window).scroll(() => {
   //debugger;
-  hello(1, 2);
+  //hello(1, 2);
 });
