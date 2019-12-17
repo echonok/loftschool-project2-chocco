@@ -14,19 +14,24 @@ hamburger.addEventListener('click', (elem) => {
 });
 
 const accordItems = document.querySelectorAll('.vertical-accord__item');
-accordItems.forEach(item => {
-
-  const accordTrigger = item.querySelector('.vertical-accord__trigger');
-  accordTrigger.addEventListener('click', elem => {
-    elem.preventDefault();
-    accordItems.forEach(item => item.classList.remove('vertical-accord__item--active'));
-    item.classList.toggle('vertical-accord__item--active');
+const accordTriggers = document.querySelectorAll('.vertical-accord__trigger');
+accordTriggers.forEach(trigger => {
+  
+  trigger.addEventListener('click', event => {
+    event.preventDefault();
+    closeAllItem();
+    trigger.parentNode.classList.toggle('vertical-accord__item--active');
   });
 
-  const closeCross = item.querySelector('.close-cross');
-  closeCross.addEventListener('click', elem => {
+  const closeCross = trigger.parentNode.getElementsByClassName("close-cross")[0];
+  closeCross.addEventListener('click', event => {
+    event.preventDefault();
+    closeAllItem();
+  });
+
+  const closeAllItem = () => {
     accordItems.forEach(item => item.classList.remove('vertical-accord__item--active'));
-  })
+  };
 
 });
 
@@ -39,21 +44,21 @@ let sliderPosition = 0;
 let leftEdge = 0;
 let rightEdge = (barList.children.length - 1) * sliderStep;
 
-const resizeSlider = (event) => {
+const resizeSlider = () => {
   sliderStep = barList.firstElementChild.offsetWidth;
   rightEdge = (barList.children.length - 1) * sliderStep;
 };
 
-window.addEventListener('resize', (event) => resizeSlider(event));
+window.addEventListener('resize', () => resizeSlider());
 
-arrowLeft.addEventListener("click", (elem) => {
-  elem.preventDefault();
+arrowLeft.addEventListener("click", (event) => {
+  event.preventDefault();
   sliderPosition = sliderPosition === leftEdge ? rightEdge : sliderPosition - sliderStep;
   barList.style.transform = `translate(-${sliderPosition}px`;
 });
 
-arrowRight.addEventListener("click", (elem) => {
-  elem.preventDefault();
+arrowRight.addEventListener("click", (event) => {
+  event.preventDefault();
   sliderPosition = sliderPosition === rightEdge ? leftEdge : sliderPosition + sliderStep;
   barList.style.transform = `translate(-${sliderPosition}px`;
 });
@@ -64,8 +69,8 @@ const closeButton = document.querySelector('#close-button');
 const modalWindow = document.querySelector('.modal');
 const modalresult = document.querySelector('.result');
 
-orderButton.addEventListener('click', (elem) => {
-  elem.preventDefault();
+orderButton.addEventListener('click', (event) => {
+  event.preventDefault();
   
   if (validateForm(orderForm)) {
     
