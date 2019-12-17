@@ -1,0 +1,22 @@
+{
+  "name": "loftschool-project2-chocco",
+  "version": "1.0.0",
+  "description": "[![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)",
+  "main": "index.js",
+  "scripts": {
+    "gulp" : "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/echonok/loftschool-project2-chocco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/echonok/loftschool-project2-chocco/issues"
+  },
+  "homepage": "https://github.com/echonok/loftschool-project2-chocco#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
