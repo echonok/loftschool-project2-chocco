@@ -48,16 +48,15 @@
   transition: all .2s;
 }
 
-.member__input:checked,
-.member__input--open {
+.member__head--opened {
 
-  ~ .member__switcher
+  .member__switcher
   {
     transform: rotate(180deg);
     fill: orange;
   }
   
-  + .member__name {
+  .member__name {
     color: orange;
   }
 

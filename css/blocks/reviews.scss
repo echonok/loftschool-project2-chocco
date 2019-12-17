@@ -47,6 +47,11 @@
   background-image: url(/img/reviews/reviews-item-bg.png);
   background-repeat: no-repeat;
   background-position: top right;
+  display: none;
+}
+
+.review__item--active {
+  display: block;
 }
 
 .review__article {
@@ -74,7 +79,7 @@
   object-fit: cover;
 }
 
-.review__carrousel-item--current,
+.review__carrousel-item--active,
 .review__carrousel-item:hover {
   border-radius: 50%;
   box-shadow: 0 0 0 rem(5px) #0f5a47;

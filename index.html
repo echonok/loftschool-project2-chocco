@@ -589,11 +589,13 @@
               </div>
 
               <div class="member__short-info">
-                <input type="checkbox" id="chck1" class="member__input">
-                <label class="member__name" for="chck1">Борис Федорович</label>
-                <svg class="member__switcher">
-                  <use href="./img/icons/social/sprite-social.svg#triangle"></use>
-                </svg>
+
+                <div class="member__head">
+                  <label class="member__name" for="chck1">Борис Федорович</label>
+                  <svg class="member__switcher">
+                    <use href="./img/icons/social/sprite-social.svg#triangle"></use>
+                  </svg>
+                </div>
 
                 <div class="member__info">
                   <span class="member__occupation">Главный технолог</span>
@@ -612,11 +614,12 @@
               </div>
 
               <div class="member__short-info">
-                <input type="checkbox" id="chck2" class="member__input">
-                <label class="member__name" for="chck2">Алла Иванова</label>
-                <svg class="member__switcher">
-                  <use href="./img/icons/social/sprite-social.svg#triangle"></use>
-                </svg>
+                <div class="member__head">
+                  <label class="member__name" for="chck2">Алла Иванова</label>
+                  <svg class="member__switcher">
+                    <use href="./img/icons/social/sprite-social.svg#triangle"></use>
+                  </svg>
+                </div>
 
                 <div class="member__info">
                   <span class="member__occupation">Специалист по упаковке</span>
@@ -635,11 +638,12 @@
               </div>
 
               <div class="member__short-info">
-                <input type="checkbox" id="chck3" class="member__input">
-                <label class="member__name" for="chck3">Кирилл Матросов</label>
-                <svg class="member__switcher">
-                  <use href="./img/icons/social/sprite-social.svg#triangle"></use>
-                </svg>
+                <div class="member__head">
+                  <label class="member__name" for="chck3">Кирилл Матросов</label>
+                  <svg class="member__switcher">
+                    <use href="./img/icons/social/sprite-social.svg#triangle"></use>
+                  </svg>
+                </div>
 
                 <div class="member__info">
                   <span class="member__occupation">Оператор</span>
@@ -658,11 +662,13 @@
               </div>
 
               <div class="member__short-info">
-                <input type="checkbox" id="chck4" class="member__input">
-                <label class="member__name" for="chck4">Мила Рыжкова</label>
-                <svg class="member__switcher">
-                  <use href="./img/icons/social/sprite-social.svg#triangle"></use>
-                </svg>
+                <div class="member__head">
+
+                  <label class="member__name" for="chck4">Мила Рыжкова</label>
+                  <svg class="member__switcher">
+                    <use href="./img/icons/social/sprite-social.svg#triangle"></use>
+                  </svg>
+                </div>
 
                 <div class="member__info">
                   <span class="member__occupation">PR, маркетинг</span>
@@ -748,7 +754,8 @@
         <div class="review">
 
           <ul class="review__list">
-            <li class="review__item">
+
+            <li class="review__item review__item--active">
               <article class="review__article">
                 <div class="review__box-avatar">
                   <img src="./img/reviews/reviews-1.jpg" alt="avatar" class="review__avatar">
@@ -763,25 +770,41 @@
                 </div>
               </article>
             </li>
+
+            <li class="review__item">
+              <article class="review__article">
+                <div class="review__box-avatar">
+                  <img src="./img/reviews/reviews-2.jpg" alt="avatar" class="review__avatar">
+                </div>
+                <div class="review__desc">
+                  <h4>Идеально подходят для спортсменов</h4>
+                  <p>После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно
+                    доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю
+                    за этот качественный и экологичный продукт.</p>
+                  <span class="review__username">Вадим Грачев</span>
+                </div>
+              </article>
+            </li>
+
+            <li class="review__item">
+              <article class="review__article">
+                <div class="review__box-avatar">
+                  <img src="./img/reviews/reviews-3.jpg" alt="avatar" class="review__avatar">
+                </div>
+                <div class="review__desc">
+                  <h4>Лучшие батончики премиум уровня</h4>
+                  <p>Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как
+                    говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же,
+                    кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс,
+                    чем минус.</p>
+                  <span class="review__username">Мария Орлова</span>
+                </div>
+              </article>
+            </li>
+
           </ul>
 
-          <ul class="review__carrousel">
-            <li class="review__carrousel-item">
-              <a href="#" class="review__link">
-                <img src="./img/reviews/reviews-1-mini.jpg" alt="avatar" class="review__avatar--mini">
-              </a>
-            </li>
-            <li class="review__carrousel-item">
-              <a href="#" class="review__link">
-                <img src="./img/reviews/reviews-2-mini.jpg" alt="avatar" class="review__avatar--mini">
-              </a>
-            </li>
-            <li class="review__carrousel-item">
-              <a href="#" class="review__link">
-                <img src="./img/reviews/reviews-3-mini.jpg" alt="avatar" class="review__avatar--mini">
-              </a>
-            </li>
-          </ul>
+          <ul class="review__carrousel"></ul>
 
         </div>
       </div>
@@ -921,7 +944,7 @@
           <div class="modal-content">
             <p class="result">Сообщение отправлено</p>
             <button class="btn btn--green" type="submit" id="close-button">закрыть</button>
-          </div>          
+          </div>
         </div>
       </div>
 
@@ -1036,8 +1059,9 @@
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="./js/script.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
 
 </body>
 

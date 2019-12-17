@@ -1191,7 +1191,11 @@ table {
   background-color: #f8faf9;
   background-image: url(/img/reviews/reviews-item-bg.png);
   background-repeat: no-repeat;
-  background-position: top right; }
+  background-position: top right;
+  display: none; }
+
+.review__item--active {
+  display: block; }
 
 .review__article {
   display: -webkit-box;
@@ -1221,7 +1225,7 @@ table {
   -o-object-fit: cover;
   object-fit: cover; }
 
-.review__carrousel-item--current,
+.review__carrousel-item--active,
 .review__carrousel-item:hover {
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 0.3125rem #0f5a47;
@@ -1384,19 +1388,16 @@ table {
   -o-transition: all .2s;
   transition: all .2s; }
 
-.member__input:checked ~ .member__switcher,
-.member__input--open ~ .member__switcher {
+.member__head--opened .member__switcher {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
   fill: orange; }
 
-.member__input:checked + .member__name,
-.member__input--open + .member__name {
+.member__head--opened .member__name {
   color: orange; }
 
-.member__input:checked ~ .member__info,
-.member__input--open ~ .member__info {
+.member__head--opened ~ .member__info {
   height: 6.875rem; }
 
 .member__short-info {

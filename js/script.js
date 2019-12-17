@@ -16,7 +16,7 @@ hamburger.addEventListener('click', (elem) => {
 const accordItems = document.querySelectorAll('.vertical-accord__item');
 const accordTriggers = document.querySelectorAll('.vertical-accord__trigger');
 accordTriggers.forEach(trigger => {
-  
+
   trigger.addEventListener('click', event => {
     event.preventDefault();
     closeAllItem();
@@ -71,9 +71,9 @@ const modalresult = document.querySelector('.result');
 
 orderButton.addEventListener('click', (event) => {
   event.preventDefault();
-  
+
   if (validateForm(orderForm)) {
-    
+
     const myMail = 'echonok@gmail.com';
 
     const formData = new FormData();
@@ -131,7 +131,7 @@ window.addEventListener('click', (elem) => {
 
 const validateForm = (form) => {
   let valid = true;
-  
+
   if (!validateField(form.elements.name)) {
     valid = false;
   }
@@ -156,13 +156,13 @@ const validateField = (field) => {
 $(document).ready(() => {
   $('.fixed-menu__item').each((ndx, item) => {
     $(item).on('click', e => {
-      
+
       e.preventDefault();
       console.log(ndx);
       console.log(item);
       let scrollSize = ndx * 1000;
       $('html, body').animate({
-        'scrollTop' : '0'
+        'scrollTop': '0'
       }, 1000);
     });
   })
@@ -171,7 +171,7 @@ $(document).ready(() => {
 
 const debounce = (func, time) => {
   let timeout;
-  return function(){
+  return function () {
     const context = this;
     const args = arguments;
     clearTimeout(timeout);
@@ -190,3 +190,49 @@ $(window).scroll(() => {
   //debugger;
   //hello(1, 2);
 });
+
+const memberHead = document.querySelectorAll('.member__head');
+memberHead.forEach(member => {
+  member.addEventListener('click', event => {
+    member.classList.toggle('member__head--opened');
+  });
+});
+
+const createCarrousel = () => {
+  
+  const addReviewPoint = (review, parent) => {
+    const li = document.createElement("li");
+    li.classList.add('review__carrousel-item');
+
+    const link = li.appendChild(document.createElement("a"));
+    link.classList.add('review__link');
+
+    const image = link.appendChild(document.createElement("img"));
+    image.classList.add('review__avatar--mini');
+    image.setAttribute("src", review.getElementsByClassName('review__avatar')[0].getAttribute('src'));
+
+    parent.appendChild(li);
+  };
+
+  const reviewCarrousel = document.querySelector('.review__carrousel');
+  const reviews = document.querySelectorAll('.review__item');
+
+  reviews.forEach(review => {
+    addReviewPoint(review, reviewCarrousel);
+  });
+  reviewCarrousel.firstElementChild.classList.add('review__carrousel-item--active');
+  
+  const reviewsAvatars = document.querySelectorAll('.review__carrousel-item');
+
+  reviewsAvatars.forEach((avatar, index) => {
+    avatar.addEventListener('click', (event) => {
+      reviewsAvatars.forEach(elem => elem.classList.remove('review__carrousel-item--active'));
+      avatar.classList.add('review__carrousel-item--active');
+      reviews.forEach(review => review.classList.remove('review__item--active'));
+      reviews[index].classList.add('review__item--active');
+    });
+  });
+
+};
+
+createCarrousel();
