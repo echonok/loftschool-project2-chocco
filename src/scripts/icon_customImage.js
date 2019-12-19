@@ -14,7 +14,7 @@
 
         ChoccoShop1 = new ymaps.Placemark(myMap.getCenter(), {
             hintContent: 'Chocco',
-            balloonContent: 'Наш фирменный магазин'
+            balloonContent: 'Наш фирменный магазин 1'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -30,7 +30,7 @@
 
         ChoccoShop2 = new ymaps.Placemark([55.743553, 37.580894], {
             hintContent: 'Chocco',
-            balloonContent: 'Наш фирменный магазин'
+            balloonContent: 'Наш фирменный магазин 2'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -46,7 +46,7 @@
 
         ChoccoShop3 = new ymaps.Placemark([55.757256, 37.620167], {
             hintContent: 'Chocco',
-            balloonContent: 'Наш фирменный магазин'
+            balloonContent: 'Наш фирменный магазин 3'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
@@ -62,7 +62,7 @@
 
         ChoccoShop4 = new ymaps.Placemark([55.758715, 37.583223], {
             hintContent: 'Chocco',
-            balloonContent: 'Наш фирменный магазин'
+            balloonContent: 'Наш фирменный магазин 4'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
