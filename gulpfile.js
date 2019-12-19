@@ -27,6 +27,7 @@ task('server', () => {
 });
 
 const stylesFiles = [...STYLES_LIBS];
+const scriptsFiles = [...JS_LIBS];
 
 task('clean', () => {
   return src(`${DIST_PATH}/*`, { read: false })
@@ -36,6 +37,12 @@ task('clean', () => {
 task('copy:html', () => {
   return src(`${SRC_PATH}/*.html`)
     .pipe(dest(`${DIST_PATH}`))
+    .pipe(reload({ stream: true}));
+});
+
+task('copy:scripts', () => {
+  return src(`${SRC_PATH}/scripts/*.js`)
+    .pipe(dest(`${DIST_PATH}/scripts`))
     .pipe(reload({ stream: true}));
 });
 
@@ -54,7 +61,7 @@ task('styles', () => {
 });
 
 task('scripts', () => {
-  return src([...JS_LIBS])
+  return src(`${SRC_PATH}/scripts/index.js`)
     .pipe(gulpif(env === 'prod', sourcemaps.init()))
     .pipe(concat('index.js', {newLine: ';'}))
     .pipe(gulpif(env === 'prod', babel({
@@ -99,12 +106,13 @@ task('fonts', () => {
 });
 
 task('watch', () => {
-  return watch(`./${SRC_PATH}/*.*`, allDevTasks);
+  return watch(`./${SRC_PATH}/**/*.*`, allDevTasksNotServer);
 });
 
-const allDevTasks = series('clean', parallel('copy:html', 'styles', 'scripts', 'images', 'fonts'), parallel('server', 'watch'));
+const allDevTasks = series('clean', parallel('copy:html', 'styles', 'copy:scripts', 'images', 'fonts'), parallel('server', 'watch'));
+const allDevTasksNotServer = series('clean', parallel('copy:html', 'styles', 'copy:scripts', 'images', 'fonts'));
 
-const allProdTasks = series('clean', parallel('copy:html', 'styles', 'scripts', 'images', 'fonts'));
+const allProdTasks = series('clean', parallel('copy:html', 'styles', 'copy:scripts', 'images', 'fonts'));
 
 task('default', allDevTasks);
 task('build', allProdTasks);
