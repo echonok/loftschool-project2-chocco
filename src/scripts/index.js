@@ -94,7 +94,6 @@ const sendDataFetch = async (formData) => {
       body: formData
     });
     const result = await response.json();
-    debugger;
     modalWindow.style.display = 'block';
     modalresult.textContent = "Заказ успешно отправлен. Благодарим за заказ!";
   } catch (error) {
@@ -166,8 +165,8 @@ const debounce = (func, time) => {
 };
 
 let hello = debounce((one, two) => {
-  console.log('hello');
-  console.log(one, two);
+  //console.log('hello');
+  //console.log(one, two);
 }, 1000);
 
 const memberHead = document.querySelectorAll('.member__head');
@@ -219,7 +218,7 @@ createCarrousel();
 
 const wheelIt = () => {
   const sections = document.querySelectorAll('.section');
-  console.log(sections.length);
+  //console.log(sections.length);
   window.addEventListener('wheel', (event) => {
     const movePage = event.deltaY < 0 ? -1000 : 1000;
     //const movePage = event.deltaY < 0 ? up : down;
@@ -236,8 +235,8 @@ const resizeScrolling = () => {
 
     const scrollStep = window.innerHeight;
     let currentPageYOffset = window.pageYOffset;
-    console.log(scrollStep);
-    console.log(currentPageYOffset);
+    //console.log(scrollStep);
+    //console.log(currentPageYOffset);
 
     //const movePage = event.deltaY < 0 ? currentPageYOffset - scrollStep : currentPageYOffset + scrollStep;
     //window.scroll({
@@ -269,8 +268,8 @@ scrollItems.forEach((item, index) => {
     const scrollStep = window.innerHeight;
     let currentPageYOffset = window.pageYOffset;
     let scrollSize = index * scrollStep;
-    console.log(index);
-    console.log(item);
+    //console.log(index);
+    //console.log(item);
 
     window.scroll({
       top: scrollSize,
