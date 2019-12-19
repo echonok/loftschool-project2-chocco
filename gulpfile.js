@@ -23,11 +23,7 @@ const { DIST_PATH, SRC_PATH, STYLES_LIBS, JS_LIBS } = require('./gulp.config');
 sass.compiler = require('node-sass');
 
 task('server', () => {
-  browserSync.init({
-      server: {
-          baseDir: `./${DIST_PATH}`
-      }
-  });
+  return browserSync.init({ server: { baseDir: `./${DIST_PATH}` } });
 });
 
 const stylesFiles = [...STYLES_LIBS];
@@ -86,17 +82,20 @@ task('icons', () => {
         symbol: "../megasprite.svg"
       }
     }))
-    .pipe(dest(`${DIST_PATH}/img`));
+    .pipe(dest(`${DIST_PATH}/img`))
+    .pipe(reload({stream: true}));
 });
 
 task('images', () => {
   return src(`${SRC_PATH}/img/**/*.*`)
-    .pipe(dest(`${DIST_PATH}/img`));
+    .pipe(dest(`${DIST_PATH}/img`))
+    .pipe(reload({stream: true}));
 });
 
 task('fonts', () => {
   return src(`${SRC_PATH}/fonts/**/*.*`)
-    .pipe(dest(`${DIST_PATH}/fonts`));
+    .pipe(dest(`${DIST_PATH}/fonts`))
+    .pipe(reload({stream: true}));
 });
 
 task('watch', () => {
