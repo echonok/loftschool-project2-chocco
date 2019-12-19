@@ -1,0 +1,21 @@
+$light-blue: #61c4d9;
+$text-main-color: #ffffff;
+$main-back: #61c4d9;
+$box-shadow: #0f5a47;
+$black: #000000;
+$almost-black: #0d0d0d;
+$member-name: #323232;
+$member-occupation: #281e1e;
+$member-description: #666666;
+$features: #b0f7ff;
+$green: #0f5a47;
+$transparent: rgba(0,0,0,0);
+
+$phones: 480px;
+$tablets: 768px;
+$laptops: 992px;
+$desktops: 1100px;
+
+@import "./css/blocks/media.scss";
+@import "./css/blocks/layout/*.scss";
+@import "./css/blocks/*.scss";

@@ -170,11 +170,6 @@ let hello = debounce((one, two) => {
   console.log(one, two);
 }, 1000);
 
-$(window).scroll(() => {
-  //debugger;
-  //hello(1, 2);
-});
-
 const memberHead = document.querySelectorAll('.member__head');
 memberHead.forEach(member => {
   member.addEventListener('click', event => {

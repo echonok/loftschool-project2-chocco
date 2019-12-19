@@ -1,4 +1,3 @@
-// media
 @mixin desktops {
 	@media screen and (max-width: $desktops) {
 		@content;
