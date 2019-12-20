@@ -215,65 +215,21 @@ const createCarrousel = () => {
 
 createCarrousel();
 
-
-const wheelIt = () => {
-  const sections = document.querySelectorAll('.section');
-  //console.log(sections.length);
-  window.addEventListener('wheel', (event) => {
-    const movePage = event.deltaY < 0 ? -1000 : 1000;
-    //const movePage = event.deltaY < 0 ? up : down;
-    window.scroll({
-      top: movePage,
-      behavior: "smooth"
-    });
-  });
-};
-
-const resizeScrolling = () => {
-  window.addEventListener('scroll', (event) => {
-    event.preventDefault();
-
-    const scrollStep = window.innerHeight;
-    let currentPageYOffset = window.pageYOffset;
-    //console.log(scrollStep);
-    //console.log(currentPageYOffset);
-
-    //const movePage = event.deltaY < 0 ? currentPageYOffset - scrollStep : currentPageYOffset + scrollStep;
-    //window.scroll({
-    //  top: movePage,
-    //  behavior: "smooth"
-    //});
-  });
-};
-
-window.addEventListener('scroll', event => {
-  //console.log(window.pageYOffset);
+const mySwiper = new Swiper('.swiper-container', {
+  speed: 300,
+  spaceBetween: 0,
+  direction: 'vertical',
+  centeredSlides: true,
+  //centeredSlidesBounds: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true,
+  },
+  mousewheel: true,
 });
 
-resizeScrolling();
-window.addEventListener('resize', () => resizeScrolling());
-//wheelIt();
-
-const scrollItems = document.querySelectorAll('.fixed-menu__item');
-
-scrollItems.forEach((item, index) => {
-  item.addEventListener('click', (event) => {
-
-    scrollItems.forEach(elem => elem.getElementsByClassName('fixed-menu__dot')[0].classList.remove('fixed-menu__dot--active'));
-
-    item.getElementsByClassName('fixed-menu__dot')[0].classList.add('fixed-menu__dot--active');
-
-    event.preventDefault();
-
-    const scrollStep = window.innerHeight;
-    let currentPageYOffset = window.pageYOffset;
-    let scrollSize = index * scrollStep;
-    //console.log(index);
-    //console.log(item);
-
-    window.scroll({
-      top: scrollSize,
-      behavior: "smooth"
-    });
-  });
+window.addEventListener('wheel', (event) => {
+  //event.preventDefault();
+  event.deltaY < 0 ? mySwiper.slidePrev() : mySwiper.slideNext();
 });
