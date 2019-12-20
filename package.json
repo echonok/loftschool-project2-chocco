@@ -39,7 +39,6 @@
     "node-sass": "^4.13.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "swiper": "^5.2.1"
+    "normalize.css": "^8.0.1"
   }
 }
