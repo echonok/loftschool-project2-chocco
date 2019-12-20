@@ -1,9 +1,11 @@
-const menuButton = document.querySelector('.bar__icon');
-const menuList = document.querySelector('.bar__ingredients');
-menuButton.addEventListener('click', (elem) => {
-  elem.preventDefault();
-  menuList.style.display = menuList.style.display === 'block' ? 'none' : 'block';
-});
+const menuButtons = document.querySelectorAll('.bar__icon');
+const menuLists = document.querySelectorAll('.bar__ingredients');
+menuButtons.forEach((menuButton, index) => {
+  menuButton.addEventListener('click', (elem) => {
+    elem.preventDefault();
+    menuLists[index].style.display = menuLists[index].style.display === 'block' ? 'none' : 'block';
+  });  
+})
 
 const mobileMenu = document.querySelector('#mobile-menu');
 const hamburger = document.querySelector('#hamburger-animated');
