@@ -29,25 +29,25 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__item">
-                <a href="#" class="nav__link">О нас</a>
+                <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Батончики</a>
+                <a href="#" class="nav__link" data-scroll-to="2">Батончики</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Команда</a>
+                <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Меню</a>
+                <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Отзывы</a>
+                <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Как мы работаем</a>
+                <a href="#" class="nav__link" data-scroll-to="6">Как мы работаем</a>
               </li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Контакты</a>
+                <a href="#" class="nav__link" data-scroll-to="8">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -82,7 +82,7 @@
                 <h2 class="section-title promo__title">натуральные шоколадные батончики</h2>
                 <div class="promo__subtitle">Наши батончики идеально подходят для
                   тех, кто следит за своим здоровьем</div>
-                <button class="btn promo-btn" type="button">заказать</button>
+                <button class="btn promo-btn" type="button" data-scroll-to="7">заказать</button>
               </article>
 
               <div class="promo__features">
@@ -318,7 +318,7 @@
                           </ul>
                           <div class="bar__order">
                             <div class="bar__price">140</div>
-                            <button class="btn btn--green btn--order">Заказать</button>
+                            <button class="btn btn--green btn--order" data-scroll-to="7">Заказать</button>
                           </div>
                         </li>
                       </ul>
@@ -433,7 +433,7 @@
                           </ul>
                           <div class="bar__order">
                             <div class="bar__price">140</div>
-                            <button class="btn btn--green btn--order">Заказать</button>
+                            <button class="btn btn--green btn--order" data-scroll-to="7">Заказать</button>
                           </div>
                         </li>
                       </ul>
@@ -560,7 +560,7 @@
                           </ul>
                           <div class="bar__order">
                             <div class="bar__price">140</div>
-                            <button class="btn btn--green btn--order">Заказать</button>
+                            <button class="btn btn--green btn--order" data-scroll-to="7">Заказать</button>
                           </div>
                         </li>
                       </ul>
@@ -834,13 +834,31 @@
         <section class="section work">
           <div class="container work__container">
             <h2 class="section-title">Как мы работаем</h2>
-            <video controls class="video__frame">
+              <div class="video__player">
+                <video id="player" poster="./img/video/video_background.png">
+                  <source src="./video/bars.mp4" type="video/mp4">
+                </video>
+                <img src="./img/video/Play_white.png" alt="" class="play video__player-img">
+                <div class="video__toolbar">
+                  
+                  <div class="duration">
+                    <img src="./img/video/Play_gray.png" alt="" class="play duration__img">
+                    <img src="./img/video/Pause_gray.png" alt="" class="play duration__img duration__img--hidden">
+                    <input type="range" class="duration__length" id="durationLevel">
+                  </div>
 
+                  <div class="sound">
+                    <img src="./img/video/Volum_gray.png" class="sound__mic" id="mic" alt="">
+                    <div class="sound__volume">
+                      <input type="range" class="duration__length duration__length--other" id="micLevel">
+                    </div>
+                  </div>
 
-
-            </video>
+                </div>
+  
+              </div>
           </div>
-        </section>
+        </section>>
       </div>
 
       <div class="swiper-slide">
@@ -1037,22 +1055,25 @@
           <nav class="mobile__nav">
             <ul class="mobile__list">
               <li class="mobile__item">
-                <a href="#" class="mobile__link">О нас</a>
+                <a href="#" class="mobile__link" data-scroll-to="1">О нас</a>
               </li>
               <li class="mobile__item">
-                <a href="#" class="mobile__link">Батончики</a>
+                <a href="#" class="mobile__link" data-scroll-to="2">Батончики</a>
               </li>
               <li class="mobile__item">
-                <a href="#" class="mobile__link">Команда</a>
+                <a href="#" class="mobile__link" data-scroll-to="3">Команда</a>
               </li>
               <li class="mobile__item">
-                <a href="#" class="mobile__link">Меню отзывы</a>
+                <a href="#" class="mobile__link" data-scroll-to="4">Меню</a>
               </li>
               <li class="mobile__item">
-                <a href="#" class="mobile__link">Как мы работаем</a>
+                <a href="#" class="mobile__link" data-scroll-to="5">Отзывы</a>
               </li>
               <li class="mobile__item">
-                <a href="#" class="mobile__link">Контакты</a>
+                <a href="#" class="mobile__link" data-scroll-to="6">Как мы работаем</a>
+              </li>
+              <li class="mobile__item">
+                <a href="#" class="mobile__link" data-scroll-to="8">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -1098,8 +1119,6 @@
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=b60c9b8c-b367-4512-b4ed-bf649f558312"
     type="text/javascript"></script>
-  <script src="./scripts/icon_customImage.js" type="text/javascript"></script>
-  <script src="./scripts/swiper.js" type="text/javascript"></script>
   <script src="./scripts/index.js" type="text/javascript"></script>
 
 </body>

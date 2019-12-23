@@ -1,4 +1,60 @@
+.video {
+  background: url("../img/video/video_background.png") center center /cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  margin-top: -20px;
+}
 
-.video__frame {
-  width: 60%;
+.video__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.video__player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: rem(660px);
+  @include tablets {
+    width: rem(590px);
+  }
+  @include phones {
+    width: 400px;
+  }
+}
+
+.video__player-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 12%;
+  cursor: pointer;
+}
+.video__player-img--active{
+  opacity:0;
+}
+
+#player {
+  width: 100%;
+  background-size: 100% 100%;
+  object-fit: cover;
+}
+
+.video__toolbar {
+  width: 100%;
+  background-color: #3e3e3e;
+  display: flex;
+  padding: rem(7px) rem(20px);
+  margin-top: -1px;
+  @include phones {
+    padding: rem(5px) rem(12px);
+  }
 }

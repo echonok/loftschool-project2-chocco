@@ -1,0 +1,15 @@
+.sound {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  padding-left: rem(45px);
+}
+
+.sound__mic {
+  cursor: pointer;
+}
+
+.sound__volume {
+  display: flex; 
+  align-items: center;
+}

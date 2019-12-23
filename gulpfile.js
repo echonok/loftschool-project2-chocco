@@ -61,7 +61,7 @@ task('styles', () => {
 });
 
 task('scripts', () => {
-  return src(`${SRC_PATH}/scripts/index.js`)
+  return src(scriptsFiles)
     .pipe(gulpif(env === 'prod', sourcemaps.init()))
     .pipe(concat('index.js', {newLine: ';'}))
     .pipe(gulpif(env === 'prod', babel({
@@ -99,6 +99,12 @@ task('images', () => {
     .pipe(reload({stream: true}));
 });
 
+task('video', () => {
+  return src(`${SRC_PATH}/video/**/*.*`)
+    .pipe(dest(`${DIST_PATH}/video`))
+    .pipe(reload({stream: true}));
+});
+
 task('fonts', () => {
   return src(`${SRC_PATH}/fonts/**/*.*`)
     .pipe(dest(`${DIST_PATH}/fonts`))
@@ -109,10 +115,10 @@ task('watch', () => {
   return watch(`./${SRC_PATH}/**/*.*`, allDevTasksNotServer);
 });
 
-const allDevTasks = series('clean', parallel('copy:html', 'styles', 'copy:scripts', 'images', 'fonts'), parallel('server', 'watch'));
-const allDevTasksNotServer = series('clean', parallel('copy:html', 'styles', 'copy:scripts', 'images', 'fonts'));
+const allDevTasks = series('clean', parallel('copy:html', 'styles', 'scripts', 'images', 'fonts', 'video'), parallel('server', 'watch'));
+const allDevTasksNotServer = series('clean', parallel('copy:html', 'styles', 'scripts', 'images', 'fonts', 'video'));
 
-const allProdTasks = series('clean', parallel('copy:html', 'styles', 'copy:scripts', 'images', 'fonts'));
+const allProdTasks = series('clean', parallel('copy:html', 'styles', 'scripts', 'images', 'fonts', 'video'));
 
 task('default', allDevTasks);
 task('build', allProdTasks);

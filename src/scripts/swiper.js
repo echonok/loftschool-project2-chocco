@@ -1,3 +1,4 @@
+(() => {
 /**
  * Swiper 5.2.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -8627,3 +8628,4 @@
 
 }));
 //# sourceMappingURL=swiper.js.map
+})()

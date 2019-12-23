@@ -1,3 +1,4 @@
+(() => {
 const menuButtons = document.querySelectorAll('.bar__icon');
 const menuLists = document.querySelectorAll('.bar__ingredients');
 menuButtons.forEach((menuButton, index) => {
@@ -13,6 +14,14 @@ hamburger.addEventListener('click', (elem) => {
   elem.preventDefault();
   hamburger.classList.toggle('open');
   mobileMenu.classList.toggle('open');
+});
+
+const mobileItems = document.querySelectorAll('.mobile__link');
+mobileItems.forEach(elem => {
+  elem.addEventListener('click', e => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
 });
 
 const accordItems = document.querySelectorAll('.vertical-accord__item');
@@ -154,23 +163,6 @@ const validateField = (field) => {
   return field.checkValidity();
 };
 
-const debounce = (func, time) => {
-  let timeout;
-  return function () {
-    const context = this;
-    const args = arguments;
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      func.apply(context, args);
-    }, time)
-  };
-};
-
-let hello = debounce((one, two) => {
-  //console.log('hello');
-  //console.log(one, two);
-}, 1000);
-
 const memberHead = document.querySelectorAll('.member__head');
 memberHead.forEach(member => {
   member.addEventListener('click', event => {
@@ -235,3 +227,11 @@ window.addEventListener('wheel', (event) => {
   //event.preventDefault();
   event.deltaY < 0 ? mySwiper.slidePrev() : mySwiper.slideNext();
 });
+
+const navItems = document.querySelectorAll("[data-scroll-to]");
+
+navItems.forEach((elem, index) => {
+  elem.addEventListener('click', e => mySwiper.slideTo(elem.getAttribute('data-scroll-to')));
+});
+
+})()
